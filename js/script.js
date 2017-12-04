@@ -116,6 +116,13 @@ $(document).ready(function() {
 	});
 	
 	
+	$( function() {
+	    $( "#accordion" ).accordion({
+	      heightStyle: "content"
+	    });
+	} );
+	
+	
 	$('.services_slider').slick({
 		//dots: true,
 		arrows: true,

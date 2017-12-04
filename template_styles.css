@@ -1909,7 +1909,7 @@ footer #dev img {
   padding-top: 200px;
   margin-top: -35px;
   padding-bottom: 270px;
-  margin-bottom: -60px;
+  margin-bottom: -224px;
 }
 #projects .in {
   padding: 35px 0 40px;
@@ -2019,6 +2019,76 @@ footer #dev img {
   }
 }
 /* end other jobs styles */
+/* start reviews styles */
+#questions {
+  z-index: 5;
+  overflow: hidden;
+}
+#questions:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 41.30208%;
+  background: url(images/questions_img.png) no-repeat left top/100% auto;
+}
+#questions .in {
+  padding: 40px 0;
+}
+#questions .questions {
+  margin-left: 35.8209%;
+  padding-top: 70px;
+  padding-bottom: 1px;
+}
+#questions .questions .h5 {
+  border-top: 1px solid #d7e1ea;
+  background: url(images/tabs_shadow.png) no-repeat center top/100% auto;
+  position: relative;
+  padding: 15px 0 10px;
+  margin-bottom: 0;
+}
+#questions .questions .h5 .content {
+  padding: 10px 50px;
+}
+#questions .questions .h5 .count {
+  background: url(images/count_bg.png) no-repeat center top/100% auto;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0 2px 1px rgba(33, 97, 143, 0.25);
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  padding-top: 4px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+#questions .questions .h5 .ui-accordion-header-icon {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  background: url(images/arr_bottom_blue.png) no-repeat center;
+  -webkit-transition: transform 0.3s ease-out 0s;
+  -moz-transition: transform 0.3s ease-out 0s;
+  -o-transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+}
+#questions .questions .h5.ui-state-active .ui-accordion-header-icon {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+#questions .questions .text {
+  padding: 0px 50px;
+}
+
+/* end reviews styles */
 /* start contacts styles */
 #contacts {
   z-index: 2;
