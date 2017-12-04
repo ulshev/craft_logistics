@@ -1,0 +1,153 @@
+/* start projects styles */
+
+#projects {
+    z-index: 1;
+    overflow: hidden;
+    background: url(images/projects_bg.jpg) no-repeat center / cover;
+    padding-top: 200px;
+    margin-top: -35px;
+    padding-bottom: 270px;
+    margin-bottom: -60px;
+    
+    .in {
+        padding: 35px 0 40px;
+    }
+    
+    .h1 {
+        float: left;
+        margin-right: 35px;
+    }
+    
+    .button_block {
+        padding-top: 10px;
+    }
+    .projects_slider {
+        clear: left;
+        margin: 0 -20px;
+        min-height: 475px;
+    }
+    .slick-list {
+        //margin: 0 70px;
+    }
+    
+    .slide {
+        float: left;
+        width: 380px;
+        //@include transition_slow(width);
+        //background-color: #fff;
+        margin: 0 50px;
+        position: relative;
+        //box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
+        margin-bottom: 50px;
+        height: 300px;
+        @include transition_slow(all);
+        
+        > div {
+            height: 100%;
+            position: relative;
+            @include transition_slow(all);
+            box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
+        }
+        
+        .bg_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: center no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        a {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .info {
+            position: absolute;
+            bottom: 0;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 25px 55px 25px 25px;
+            background: #fff;
+            z-index: 3;
+            font-family: $font-family_h;
+            font-size: 20px;
+            line-height: 125%;
+            color: $color_a;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 50px;
+                background: url(images/arr_next_blue.png) no-repeat center;
+                @include transition(all);
+            }
+        }
+        &:hover .info {
+            
+            &:after {
+                width: 30px;
+            }
+        }
+    }
+    .slick-center {
+        //width: 540px;
+        height: 425px;
+        box-shadow: none;
+        
+        > div {
+            margin: 0 -80px 0;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+    
+}
+
+@media screen and (max-width: 1300px){
+    
+}
+@media screen and (max-width: 999px) {
+    #other_jobs {
+        .h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            line-height: 145%;
+        }
+    }
+    
+}
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 590px) {
+    #other_jobs {
+        .h2 {
+            font-size: 19px;
+            line-height: 145%;
+        }
+        
+        .slick-list {
+            margin: 0 45px;
+        }
+        
+        
+    }
+}
+
+@media screen and (max-width: 450px) {
+   
+}
+
+/* end other jobs styles */

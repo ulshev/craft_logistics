@@ -1,0 +1,61 @@
+/* start about styles */
+
+#about {
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 245px;
+    margin-top: -150px;
+    padding-bottom: 300px;
+    margin-bottom: -300px;
+    background: url(images/about_bg.jpg) no-repeat center / cover;
+    
+    
+    .about_img {
+        width: 63%;
+        float: right;
+        margin: -35px -20px 85px -70px;
+    }
+    
+    .h1 {
+        text-align: left;
+        line-height: 85%;
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+    #about {
+        
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #about {
+        
+    }
+    
+}
+@media screen and (max-width: 999px) {
+    #about {
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    #about {
+        
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #about {
+        
+    }
+}
+
+@media screen and (max-width: 450px) {
+   #about {
+        
+    }
+}
+
+/* end about styles */

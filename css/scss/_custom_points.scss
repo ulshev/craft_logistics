@@ -1,0 +1,73 @@
+/* start custom_points styles */
+
+#custom_points {
+    background: url(images/custom_points.png) no-repeat center top ;
+    padding-top: 220px;
+    padding-bottom: 150px;
+    z-index: 2;
+    
+    .text {
+	float: right;
+	width: 340/1340*100%;
+	margin-right: 140/1340*100%;
+    }
+    
+    .h1 {
+	text-align: left;
+	line-height: 90%;
+	font-size: 50px;
+    }
+    
+    ul {
+	padding-bottom: 10px;
+	li {
+	    font-family: $font_family_h;
+	    color: $color_a;
+	    font-size: 25px;
+	    line-height: 130%;
+	    margin-bottom: 20px;
+	    
+	    .content {
+		padding-left: 30px;
+		background: url(images/icon_address_blue.png) no-repeat left center ;
+	    }
+	}
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+    #custom_points {
+	
+    }
+}
+
+@media screen and (max-width: 1300px)  {
+    #custom_points {
+	
+	
+    }
+}
+@media screen and (max-width: 999px) {
+    #custom_points {
+	
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #custom_points {
+	
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #custom_points {
+	
+    }
+}
+
+@media screen and (max-width: 450px) {
+}
+
+/* end action styles */

@@ -1,0 +1,471 @@
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+$font_family_os: 'Open Sans', Arial, Helvetica, sans-serif;
+$font_family_h: 'Antipasto Pro', 'Open Sans', Arial, Helvetica, sans-serif;
+
+$color_text: #666666;
+$color_h: #1f1f1f;
+$color_a: #008dbf;
+$max-width: 1340px;
+
+@mixin clear() {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@mixin decor_b() {
+    position: relative;
+	
+    &:before, &:after {
+	content: "";
+	position: absolute;
+	left: 0%;
+	width: 8px;
+	height: 60px;
+	background-color: #ed6e2e;
+	-webkit-transform: skew(-25deg);
+	-moz-transform: skew(-25deg);
+	-o-transform: skew(-25deg);
+	transform: skew(-25deg);
+    }
+    &:before {
+	top: -80px;
+	margin-left: 155px;
+	background: #5cb030; /* for non-css3 browsers */
+
+	background: -webkit-linear-gradient(top, #c0e604, #5cb030); /* для webkit-браузеров */
+	background: -moz-linear-gradient(top,  #c0e604,  #5cb030); /* для firefox 3.6+ */
+	background: -o-linear-gradient(top,  #c0e604,  #5cb030); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c0e604,  #5cb030); /* для IE10+ */
+	background: linear-gradient(to top, #5cb030, #c0e604);
+    }
+    &:after {
+	bottom: -60px;
+	margin-left: 15px;
+	background: #0660aa; /* for non-css3 browsers */
+
+	background: -webkit-linear-gradient(top, #009dc6, #0660aa); /* для webkit-браузеров */
+	background: -moz-linear-gradient(top,  #009dc6,  #0660aa); /* для firefox 3.6+ */
+	background: -o-linear-gradient(top,  #009dc6,  #0660aa); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #009dc6,  #0660aa); /* для IE10+ */
+	background: linear-gradient(to top, #0660aa, #009dc6);
+    }
+}
+@mixin decor_s() {
+    position: relative;
+	
+    &:before, &:after {
+	content: "";
+	position: absolute;
+	left: 0%;
+	width: 4px;
+	height: 30px;
+	background-color: #ed6e2e;
+	-webkit-transform: skew(-25deg);
+	-moz-transform: skew(-25deg);
+	-o-transform: skew(-25deg);
+	transform: skew(-25deg);
+    }
+    &:before {
+	top: -43px;
+	margin-left: 95px;
+	background: #5cb030; /* for non-css3 browsers */
+
+	background: -webkit-linear-gradient(top, #c0e604, #5cb030); /* для webkit-браузеров */
+	background: -moz-linear-gradient(top,  #c0e604,  #5cb030); /* для firefox 3.6+ */
+	background: -o-linear-gradient(top,  #c0e604,  #5cb030); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c0e604,  #5cb030); /* для IE10+ */
+	background: linear-gradient(to top, #5cb030, #c0e604);
+    }
+    &:after {
+	bottom: -48px;
+	margin-left: 40px;
+	background: #0660aa; /* for non-css3 browsers */
+
+	background: -webkit-linear-gradient(top, #009dc6, #0660aa); /* для webkit-браузеров */
+	background: -moz-linear-gradient(top,  #009dc6,  #0660aa); /* для firefox 3.6+ */
+	background: -o-linear-gradient(top,  #009dc6,  #0660aa); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #009dc6,  #0660aa); /* для IE10+ */
+	background: linear-gradient(to top, #0660aa, #009dc6);
+    }
+}
+
+@mixin transition($property) {
+	-webkit-transition: $property 0.3s ease-out 0s;
+	-moz-transition: $property 0.3s ease-out 0s;
+	-o-transition: $property 0.3s ease-out 0s;
+	transition: $property 0.3s ease-out 0s;
+}
+@mixin transition_slow($property) {
+	-webkit-transition: $property 0.6s ease-out 0s;
+	-moz-transition: $property 0.6s ease-out 0s;
+	-o-transition: $property 0.6s ease-out 0s;
+	transition: $property 0.6s ease-out 0s;
+}
+
+body {   
+    font-family: $font_family_os;
+    font-size: 14px;
+    line-height: 162.5%;
+    font-weight: 400;
+    color: $color_text;
+    
+    //background: url(images/site.jpg) center top no-repeat;
+//background-size: auto;
+} 
+a {
+    text-decoration: none;
+    color: $color_a;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-weight: 300;
+	line-height: 125%;
+	font-family: $font_family_h;
+}
+
+h1, .h1 {
+    font-size: 55px;
+    text-align: center;
+    //text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    line-height: 100%;  
+}
+
+h2, .h2 {
+    font-size: 45px;
+}
+h3, .h3 {
+    font-size: 35px;
+}
+h4, .h4 {
+    font-size:25px;
+}
+h5, .h5 {
+    font-size: 20px;
+}
+h6, .h6 {
+    font-size: 15px;
+}
+
+
+
+a.button {
+	padding: 0 10px;
+	margin-left: 20px;
+	
+        height: 40px;
+	
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	
+	text-align: center;
+	text-decoration: none;
+	
+	font-size: 16px;
+	line-height: 40px;
+        font-weight: 400;
+	font-family: $font_family_h;
+	letter-spacing: 0.9px;
+	color: #fff;
+	background: #0472b2;
+	cursor: pointer;
+	//border-radius: 3px;
+	@include transition(background);
+	
+	&:before, &:after {
+		content: "";
+		display: block;
+		//width: 22px;
+		//height: 40px;
+		margin-left: -30px;
+		float: left;
+		border-bottom: 40px solid #0472b2; 
+		border-left: 20px solid transparent;
+		border-radius: 1px 0px 0px 3px;
+		@include transition(border-color);
+	}
+	&:after {
+		margin-left: 0px;
+		margin-right: -30px;
+		float: right;
+		border: 0;
+		border-top: 40px solid #0472b2; 
+		border-right: 20px solid transparent;
+		border-radius: 0px 1px 3px 0px;
+	}
+	&:hover {
+		background: #0589d6;
+	}
+	
+	&:hover:before, &:hover:after {
+		border-bottom-color: #0589d6;
+		border-top-color: #0589d6; 
+	}
+	&:active,  {
+		background: #059ff9; 
+	}
+	&:active:before, &:active:after {
+		border-bottom-color: #059ff9;
+		border-top-color: #059ff9;
+	}
+	
+}
+
+.slick-slider {
+	position: relative;
+	margin: 0 auto;
+
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		width: 30px;
+		height: 40px;
+		//text-indent: 10000px;
+		//overflow: hidden;
+		z-index: 5;
+		outline: none;
+		background: rgba(255, 255, 255, 0.5) center no-repeat;
+		cursor: pointer;
+		@include transition(background-color);
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 1);
+			
+			&:before {
+				border-top-color: rgba(255, 255, 255, 1);
+				border-bottom-color: rgba(255, 255, 255, 1); 
+			}
+		}
+		
+		&:before {
+			content: "";
+			display: block;
+			//width: 22px;
+			//height: 40px;
+			//border-radius: 1px 0px 0px 3px;
+			@include transition(border-color);
+		}
+	}
+	.slick-prev {
+		left: 10px;
+		background-image: url(images/arr_prev_blue.png);
+		
+		&:before {
+			margin-right: -20px;
+			float: right;
+			border-top: 40px solid rgba(255, 255, 255, 0.5); 
+			border-right: 20px solid transparent;
+		}
+	}
+	.slick-next {
+		background-image:  url(images/arr_next_blue.png);
+		right: 10px;
+		
+		&:before {
+			margin-left: -20px;
+			float: left;
+			border-bottom: 40px solid rgba(255, 255, 255, 0.5); 
+			border-left: 20px solid transparent;
+		}
+	}
+	
+}
+
+.tabs_container {
+	position: relative;
+}
+    
+.tab {
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+.tab.active {
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+}
+
+.tab_buttons {
+	text-align: center;
+	position: relative;
+	
+	
+	> span {
+		display: inline-block;
+		padding: 15px 35px;
+		//color: #fff;
+		cursor: pointer;
+		font-family: $font_family_h;
+		font-size: 20px;
+		box-sizing: border-box;
+		vertical-align: middle;
+		height: 60px;          
+		line-height: 30px;
+		position: relative;
+		
+		-webkit-transform: skew(-25deg);
+		-moz-transform: skew(-25deg);
+		-o-transform: skew(-25deg);
+		transform: skew(-25deg);
+		
+		
+		background: #fff; /* for non-css3 browsers */
+
+		    background: -webkit-linear-gradient(top, transparent, #fff); /* для webkit-браузеров */
+		    background: -moz-linear-gradient(top,  transparent,  #fff); /* для firefox 3.6+ */
+		    background: -o-linear-gradient(top,  transparent,  #fff); /* для Opera 11.10+ */
+		    background: -ms-linear-gradient(top,  transparent,  #fff); /* для IE10+ */
+		    background: linear-gradient(to top, #fff, transparent);
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-bottom: 3px solid transparent;
+			@include transition(border-color);
+		}
+		&:hover {
+			color: $color_a;
+		}
+		
+		&.active {
+			color: $color_a;
+			background: #e6eff2; /* for non-css3 browsers */
+
+		    background: -webkit-linear-gradient(top, transparent, #e6eff2); /* для webkit-браузеров */
+		    background: -moz-linear-gradient(top,  transparent,  #e6eff2); /* для firefox 3.6+ */
+		    background: -o-linear-gradient(top,  transparent,  #e6eff2); /* для Opera 11.10+ */
+		    background: -ms-linear-gradient(top,  transparent,  #e6eff2); /* для IE10+ */
+		    background: linear-gradient(to top, #e6eff2, transparent);
+		    
+			&:after {
+				border-color: #009dc6;
+			}
+		}
+		
+		> span {
+			-webkit-transform: skew(25deg);
+			-moz-transform: skew(25deg);
+			-o-transform: skew(25deg);
+			transform: skew(25deg);
+		}
+		
+	}
+}
+
+.tab_dots {
+	text-align: center;
+	position: relative;
+	border-top: 1px solid #d7e1ea;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 30px;
+		background: url(images/tabs_shadow.png) no-repeat center top / 100% 100%;
+	}
+	
+	li {
+		display: inline-block;
+		padding: 25px 5px 0;
+		margin: 0 30px;
+		cursor: pointer;
+		font-family: $font_family_h;
+		font-size: 17px;
+		line-height: 145%;
+		box-sizing: border-box;
+		min-height: 60px; 
+		position: relative;
+		
+		&:hover, &.active {
+			color: $color_a;
+		}
+		
+		.content {
+			padding-top: 5px;
+			min-height: 45px;
+			box-sizing: border-box;
+		}
+		.icon {
+			background: center left no-repeat;
+			margin-right: 15px;
+			margin-top: -5px;
+			float: left;
+			width: 35px;
+			height: 34px;
+			opacity: 0.3;
+			@include transition(opacity);
+		}
+		
+		&:hover .icon, &.active .icon {
+			opacity: 1;
+		}
+	}
+}
+
+
+.num {
+	position: absolute;
+	width: 157px;
+	height: 104px;
+	top: 0;
+	left: 0;
+	
+	span {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	    
+	.content {
+		background: no-repeat center /auto 100% ;
+		text-indent: -1000px;
+	}
+}
+
+
+.in {
+	padding: 10px 20px;
+        margin: 0 auto;
+        max-width: $max-width;
+        position: relative;
+	
+	&:after {
+	    @include clear();
+	}
+}
+
+.main_section .in {
+	padding: 40px 20px;
+}
+.main_section {
+	//display: none;
+	overflow: hidden;
+	z-index: 2;
+	position: relative;
+}
+
+
+
+.fancybox-enabled {
+    overflow: auto;
+}

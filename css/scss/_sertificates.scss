@@ -1,0 +1,113 @@
+/* start sertificates styles */
+
+#sertificates {
+    clear: both;
+    
+    .text {
+        float: left;
+        width: 320/1340*100%;
+        line-height: 145%;
+        padding-top: 40px;
+        
+        .h3 {
+            line-height: 90%;
+            margin-bottom: 30px;
+            margin-top: 40px;
+            
+            @include decor_b();
+            
+            &:before {
+                margin-left: 100px;
+            }
+            &:after {
+                bottom: -75px;
+            }
+        }
+        
+        .button_block {
+            padding-left: 50px;
+        }
+        
+    }
+    
+    .sertificates_slider {
+        margin-left: 360/1340*100%;
+        max-width: 960px;
+        
+        .slick-list { 
+            padding: 0 0px 40px;
+            
+        }
+        
+        .slick-slide {
+            margin: 0 10px;
+            width: 220px;
+            box-shadow: 0 20px 10px rgba(33, 97, 143, 0.25);
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+    #sertificates {
+        
+        
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #sertificates {
+        
+        
+    }
+    
+}
+@media screen and (max-width: 999px) {
+    #sertificates {
+        .text {
+            width: auto;
+            float: none;
+            margin-bottom: 30px;
+        } 
+        .sertificates_slider {
+            margin-left: 0;
+        }
+    }
+    
+}
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 590px) {
+    #sertificates {
+        .text {
+            
+            .h2 {
+                font-size: 18px;
+                line-height: 145%;
+                margin-bottom: 10px;
+            }
+            p {
+                padding: 0px;
+            }
+            .button {
+                line-height: 130%;
+                font-size: 13px;
+            }
+        }
+        .sertificates_slider {
+            margin: 0 -20px;
+            padding: 0 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+   
+}
+
+/* end sertificates styles */

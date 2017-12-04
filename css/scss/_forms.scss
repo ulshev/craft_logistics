@@ -1,0 +1,345 @@
+/* start forms styles */
+
+.main_section.form {
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: url(images/bg_grid.png);
+    }
+    
+    .in {
+	color: #fff;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	padding: 60px 20px 35px;
+    }
+    
+    .h2 {
+	font-size: 35px;
+	line-height: 130%;
+	font-weight: 500;
+    }
+    
+    p {
+	font-weight: 100;
+	font-size: 25px;
+	line-height: 145%;
+    }
+    
+    .green {
+	color: $color_a;
+	margin-bottom: 5px;
+	font-weight: 200;
+    }
+    
+    .button_block {
+	padding-top: 10px;
+	padding-bottom: 30px;
+    }
+}
+.form {   
+    form {
+	padding-top: 20px;
+    }
+    
+    
+    input, textarea, select {
+	padding: 5px 0;
+	margin: 0 10px 30px;
+	width: 367px;
+	height: 45px;
+	outline: none;
+	border: 1px solid transparent;
+	border-bottom-color: rgba(225, 225, 225, 0.5) ;
+	background:transparent;
+	font-family: $font_family_os;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 35px;
+	color: #fff;
+        vertical-align: top;
+	box-sizing: border-box;
+	&::-webkit-input-placeholder {opacity: 1; color: #fff;}
+	&::-moz-placeholder          {opacity: 1; color: #fff;}/* Firefox 19+ */
+	&:-moz-placeholder           {opacity: 1; color: #fff;}/* Firefox 18- */
+	&:-ms-input-placeholder      {opacity: 1; color: #fff;}
+    }
+    
+    input {
+	text-align: center;
+    }
+    
+    textarea, input.textarea {
+	    min-width: 710px;
+	    max-width: 710px;
+	    min-height: 45px;
+	    max-height: 45px;
+	    resize: none;
+	    
+    }
+    input[type="submit"], input[type="reset"] {
+	    margin-right: 0;
+	    margin-left: 0;
+	    width: 315px;
+	    height: 58px;
+	    font-size: 18px;
+	    font-weight: 400;
+	    background-color: #ed6e2e;
+	    cursor: pointer;
+	    margin-bottom: 0;
+	    border-radius: 3px;
+	    @include transition(background-color);
+	    border-bottom-color: transparent
+    }
+    input[type="submit"]:hover {
+	    //box-shadow: inset 0 0 2px RGBA(0, 0, 0, 0.5);
+	    background-color: #d1632b;
+    }
+    input[type="submit"]:active, input[type="reset"]:active {
+	    height: 56px;
+	    margin-bottom: 1px;
+	    margin-top: 1px;
+    }
+    
+}
+#form1 {
+    z-index: 12;
+}
+#form2 {
+    z-index: 7;
+}
+#form3 {
+    z-index: 2;
+    input[type="text"] {
+	text-align: left;
+    }
+}
+    
+
+@media screen and (max-width: 1600px) {
+    .main_section.form {
+	.in {
+	    padding: 50px 20px 25px;
+	    z-index: 2;
+	}
+	
+	.h2 {
+	    font-size: 32px;
+	    line-height: 130%;
+	}
+	
+	p {
+	    font-size: 22px;
+	    line-height: 145%;
+	}
+	
+	.button_block {
+	    padding-top: 10px;
+	    padding-bottom: 30px
+	}
+    }
+    .form { 
+	input[type="text"], textarea, select {
+	    margin: 0 10px 30px;
+	    width: 337px;
+	    height: 42px;
+	    font-size: 16px;
+	}
+	
+	textarea, input.textarea {
+	    min-width: 660px;
+	    max-width: 660px;
+	    min-height: 42px;
+	    max-height: 42px;
+	}
+	
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+    .main_section.form {
+	.in {
+	    padding: 40px 20px 15px;
+	    z-index: 2;
+	}
+	
+	.h2 {
+	    font-size: 29px;
+	    line-height: 130%;
+	}
+	
+	p {
+	    font-size: 20px;
+	    line-height: 145%;
+	}
+	
+	.button_block {
+	    padding-top: 10px;
+	    padding-bottom: 30px
+	}
+    }
+    .main_section.form { 
+	
+	input[type="text"], textarea, select {
+	    margin: 0 10px 30px;
+	    width: 287px;
+	    height: 40px;
+	    font-size: 16px;
+	}
+	
+	textarea, input.textarea {
+	    min-width: 580px;
+	    max-width: 580px;
+	    min-height: 40px;
+	    max-height: 40px;
+	}
+	
+	input[type="submit"], input[type="reset"] {
+	    width: 265px;
+	    font-size: 18px;
+	    font-weight: 400;
+	}
+    }
+}
+@media screen and (max-width: 999px) {
+    .main_section.form {
+	.in {
+	    padding: 30px 20px 5px;
+	    z-index: 2;
+	}
+	
+	.h2 {
+	    font-size: 29px;
+	    line-height: 130%;
+	}
+	
+	p {
+	    font-size: 20px;
+	    line-height: 145%;
+	}
+	
+	.button_block {
+	    padding-top: 10px;
+	    padding-bottom: 30px
+	}
+	
+    }
+    .form { 
+	form {
+	    padding-top: 0px;
+	}
+	
+	input[type="text"], textarea, select {
+	    margin: 0 10px 20px;
+	    width: 220px;
+	    font-size: 16px;
+	}
+	
+	textarea, input.textarea {
+	    min-width: 450px;
+	    max-width: 450px;
+	}
+	
+	input[type="submit"], input[type="reset"] {
+	    margin-right: 0;
+	    width: 200px;
+	    height: 50px;
+	    font-size: 16px;
+	    font-weight: 400;
+	}
+	
+	input[type="submit"]:active, input[type="reset"]:active {
+	    height: 48px;
+	}
+    }
+}
+
+
+//@media screen and (max-width: 800px) {
+    
+//}
+
+@media screen and (max-width: 590px) {
+    .main_section.form {
+	
+	.h2 {
+	    font-size: 25px;
+	    line-height: 130%;
+	}
+	
+	p {
+	    font-size: 18px;
+	    line-height: 145%;
+	}
+	
+    }
+    .form { 
+	input[type="text"], textarea, select {
+	    width: 220px;
+	    font-size: 15px;
+	}
+	
+	textarea, input.textarea {
+	    min-width: 350px;
+	    max-width: 350px;
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main_section.form {
+	
+	.h2 {
+	    font-size: 22px;
+	    line-height: 130%;
+	}
+	
+	p {
+	    font-size: 16px;
+	    line-height: 145%;
+	}
+	
+    }
+    .form {
+	input[type="text"], textarea, select {
+	    width: 280px;
+	}
+	textarea, input.textarea {
+	    min-width: 280px;
+	    max-width: 280px;
+	}
+    }
+    #form3 input[type="text"] {
+	text-align: center;
+	
+    }
+}
+
+/* for IE9 */
+@media screen and (min-width:0\0) { 
+    .main_section.form {
+	background-attachment: inherit;
+    }
+}
+
+/* for IE10 & IE11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .main_section.form {
+	background-attachment: inherit;
+    }
+}
+
+/* end forms styles */

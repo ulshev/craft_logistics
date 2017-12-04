@@ -1,0 +1,273 @@
+/* start main slide styles */
+
+#main_slide {
+    overflow: hidden;
+    z-index: 1;
+    background: #b4bed9 url(images/slide_bg.jpg) no-repeat center / cover;
+    padding-top: 225px;
+    padding-bottom: 225px;
+    margin-bottom: -180px;
+    
+    .h1 {
+        font-size: 90px;
+        line-height: 107%;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 37px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	@include decor_b();
+	
+	b {
+	    font-weight: 800;
+	    display: block;
+	}
+    }
+    a.button {
+	margin-left: 50px;
+    }
+    ul {
+        padding-top: 217px;
+	font-size: 21px;
+	line-height: 130%;
+	text-align: left;
+                
+        li {
+	    display: inline-block;
+            vertical-align: top;
+            margin: 0 6.3% 20px 0;
+	    width: 29%;
+	    @include decor_s();
+	    
+	    &:last-child {
+		margin-right: 0;
+		width: 26%;
+	    }
+	    
+	    a {
+		//background: center left no-repeat;
+		//padding-left: 60px;
+		display: inline-block;
+		//padding-top: 15px;
+		//min-height: 55px;
+		//box-sizing: border-box;
+		color: $color_text;
+		
+		&:hover {
+		    color: $color_a;
+		}
+		
+		.content {
+		    background: center left no-repeat;
+		    padding-left: 60px;
+		    padding-top: 15px;
+		    min-height: 55px;
+		    box-sizing: border-box;
+		}
+	    }
+	    &:first-child a .content {
+		padding-top: 0;
+	    }
+	    
+	    &.icon1 a .content {
+		background-image: url(images/icon1.png)
+	    }
+	    &.icon1 a:hover .content {
+		background-image: url(images/icon1_hover.png)
+	    }
+	    &.icon2 a .content {
+		background-image: url(images/icon2.png)
+	    }
+	    &.icon2 a:hover .content {
+		background-image: url(images/icon2_hover.png)
+	    }
+	    &.icon3 a .content {
+		background-image: url(images/icon3.png)
+	    }
+	    &.icon3 a:hover .content {
+		background-image: url(images/icon3_hover.png)
+	    }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #main_slide {
+	
+	.h1 {
+	    font-size: 80px;
+	    line-height: 107%;
+	}
+	ul {
+	    padding-top: 150px;
+	    font-size: 20px;
+	    line-height: 130%;
+	}
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #main_slide {
+	padding-top: 205px;
+	
+	.h1 {
+	    font-size: 70px;
+	    line-height: 107%;
+	}
+	ul {
+	    padding-top: 120px;
+	    font-size: 18px;
+	    line-height: 130%;
+	    li {
+		margin: 0 3.3% 20px 0;
+		width: 33%;
+	    }
+	}
+    }
+
+}
+@media screen and (max-width: 999px) {
+    #main_slide {
+	padding-top: 165px;
+	
+	.h1 {
+	    font-size: 60px;
+	    line-height: 107%;
+	}
+	ul {
+	    padding-top: 120px;
+	    font-size: 16px;
+	    line-height: 130%;
+	    li {
+		margin: 0 7% 20px 0;
+		width: 22%;
+		&:last-child {
+		    width: 22%;
+		}
+		&.icon1 {
+		    width: 37%;
+		}
+		
+		a .content {
+		    padding-top: 0;
+		    background-size: auto 35px;
+		    min-height: 40px;
+		    padding-left: 50px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #main_slide {
+	padding-top: 125px;
+	padding-bottom: 85px;
+	
+	.h1 {
+	    font-size: 50px;
+	    line-height: 107%;
+	    padding-left: 25px;
+	    
+	    &:before, &:after  {
+		width: 5px;
+		height: 40px;
+	    }
+	    &:before  {
+		top: -50px;
+		margin-left: 85px;
+	    }
+	    &:after  {
+		bottom: -30px;
+		margin-left: 5px;
+	    }
+	}
+	ul {
+	    padding-top: 60px;
+	    font-size: 15px;
+	    line-height: 130%;
+	    li {
+		margin: 0 10% 20px 0;
+		width: auto;
+		max-width: 350px;
+		
+		&:last-child {
+		    width: auto;
+		    margin-right: 10%;
+		}
+		&.icon1 {
+		    width: auto;
+		}
+		
+		&:before, &:after {
+		    display: none;
+		}
+		
+		a .content {
+		    padding-top: 10px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #main_slide {
+	padding-top: 100px;
+	padding-bottom: 85px;
+	
+	.h1 {
+	    font-size: 40px;
+	    line-height: 107%;
+	    padding-left: 25px;
+	    
+	}
+	
+	ul {
+	    padding-top: 40px;
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #main_slide {
+	padding-top: 80px;
+	padding-bottom: 65px;
+	
+	.h1 {
+	    font-size: 30px;
+	    line-height: 107%;
+	    padding-left: 20px;
+	    
+	    &:before, &:after  {
+		width: 4px;
+		height: 30px;
+	    }
+	    &:before  {
+		top: -40px;
+		margin-left: 65px;
+	    }
+	    &:after  {
+		bottom: -25px;
+		margin-left: 5px;
+	    }
+	}
+	ul {
+	    padding-top: 30px;
+	    font-size: 13px;
+	    line-height: 130%;
+	    li {
+		margin-bottom: 15px;
+		
+		a .content {
+		    background-size: auto 30px;
+		    min-height: 32px;
+		    padding-left: 45px;
+		}
+	    }
+	}
+    }
+}
+
+
+/* end main slider styles */
