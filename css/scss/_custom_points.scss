@@ -34,6 +34,33 @@
 	}
     }
     
+    .points {
+	margin-top: -100px;
+	.point.smolensk {
+	    top: 537px;
+	    margin-left: -569px;
+	}
+	
+	.point.moscow {
+	    top: 511px;
+	    margin-left: -352px;
+	}
+	.point.sheremetyevo {
+	    top: 473px;
+	    margin-left: -352px;
+	}
+	
+	.point.petersburg {
+	    top: 106px;
+	    margin-left: -356px;
+	}
+	
+	.point.baltic {
+	    top: 68px;
+	    margin-left: -397px;
+	}
+    }
+    
 }
 
 @media screen and (max-width: 1600px) {

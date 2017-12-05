@@ -20,18 +20,37 @@
         padding: 40px 0;
     }
     
+    .h1 {
+	font-size: 50px;
+	line-height: 90%;
+	text-align: left;
+	margin-left: 480/1340*100%;
+	
+	.mask {
+	    display: block;
+	}
+    }
+    
     
     .questions {
         margin-left: 480/1340*100%;
-        padding-top: 70px;
+        //padding-top: 70px;
         padding-bottom: 1px;
 	
 	.h5 {
+	    border: 0;
 	    border-top: 1px solid #d7e1ea;
 	    background: url(images/tabs_shadow.png) no-repeat center top / 100% auto ;
 	    position: relative;
 	    padding: 15px 0 10px ;
 	    margin-bottom: 0;
+	    font-size: 20px;
+	    line-height: 145%;
+	    
+	    &:first-child {
+		background: none;
+		border: 0;
+	    }
 	    
 	    .content {
 		padding: 10px 50px;
@@ -61,7 +80,7 @@
 		width: 12px;
 		height: 12px;
 		background: url(images/arr_bottom_blue.png) no-repeat center;
-		@include transition(transform);
+		@include transition_slow(transform);
 	    }
 	    
 	    &.ui-state-active .ui-accordion-header-icon {
@@ -73,7 +92,10 @@
 	}
             
 	.text {
+	    border: 0;
 	    padding: 0px 50px;
+	    color: $color_text;
+	    line-height: 162%;
 	}
            
     }

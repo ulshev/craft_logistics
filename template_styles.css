@@ -386,6 +386,128 @@ a.button:active:before, a.button:active:after {
   text-indent: -1000px;
 }
 
+.points {
+  position: relative;
+  max-width: 1340px;
+  height: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+}
+.points .point {
+  position: absolute;
+  min-height: 45px;
+  min-width: 45px;
+  line-height: 145%;
+  color: #fff;
+  padding-left: 12px;
+  left: 50%;
+  text-align: left;
+}
+.points .point:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 45px;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  background: url(images/point_decor.png) no-repeat center top;
+}
+.points .point .hidden {
+  overflow: hidden;
+  display: block;
+}
+.points .point .content {
+  height: 39px;
+  box-sizing: border-box;
+  display: block;
+  background: url(images/point_bg.png) no-repeat right top;
+  padding: 3px 20px 5px 20px;
+  font-family: "Antipasto Pro", "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.points .point .more_info {
+  position: absolute;
+  bottom: 27px;
+  left: 12px;
+  width: 311px;
+  background: url(images/point_bg_big.png) no-repeat right top/100%;
+  padding: 25px 25px 5px;
+  text-align: left;
+  z-index: 10;
+  display: none;
+}
+.points .point .more_info:after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 8px;
+  bottom: -8px;
+  right: -1px;
+  background: url(images/point_shadow_big.png) no-repeat center top;
+}
+.points .point .more_info .close {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 20px;
+  right: 20px;
+  background: url(images/close.png) no-repeat center top;
+  -webkit-transition: transform 0.3s ease-out 0s;
+  -moz-transition: transform 0.3s ease-out 0s;
+  -o-transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+  cursor: pointer;
+}
+.points .point .more_info .close:hover {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.points .point .more_info h5 {
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.points .point .more_info .cont {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 160%;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  background: no-repeat left 4px;
+  font-weight: 300;
+}
+.points .point .more_info .cont.address {
+  background-image: url(images/icon_address_white.png);
+}
+.points .point .more_info .cont.email {
+  background-image: url(images/icon_letter_white.png);
+}
+.points .point .more_info a {
+  color: #fff;
+  text-decoration: none;
+}
+.points .point .more_info a:hover {
+  text-decoration: underline;
+}
+.points .point.active:before {
+  z-index: 15;
+  width: 34px;
+  height: 62px;
+  left: 12px;
+  background: url(images/point_decor_big.png) no-repeat center top;
+}
+.points .point.active .hidden {
+  display: none;
+}
+.points .point.active .more_info {
+  display: block;
+}
+
 .in {
   padding: 10px 20px;
   margin: 0 auto;
@@ -1631,6 +1753,29 @@ footer #dev img {
   padding-left: 30px;
   background: url(images/icon_address_blue.png) no-repeat left center;
 }
+#custom_points .points {
+  margin-top: -100px;
+}
+#custom_points .points .point.smolensk {
+  top: 537px;
+  margin-left: -569px;
+}
+#custom_points .points .point.moscow {
+  top: 511px;
+  margin-left: -352px;
+}
+#custom_points .points .point.sheremetyevo {
+  top: 473px;
+  margin-left: -352px;
+}
+#custom_points .points .point.petersburg {
+  top: 106px;
+  margin-left: -356px;
+}
+#custom_points .points .point.baltic {
+  top: 68px;
+  margin-left: -397px;
+}
 
 /* end action styles */
 /* start about styles */
@@ -2036,17 +2181,32 @@ footer #dev img {
 #questions .in {
   padding: 40px 0;
 }
+#questions .h1 {
+  font-size: 50px;
+  line-height: 90%;
+  text-align: left;
+  margin-left: 35.8209%;
+}
+#questions .h1 .mask {
+  display: block;
+}
 #questions .questions {
   margin-left: 35.8209%;
-  padding-top: 70px;
   padding-bottom: 1px;
 }
 #questions .questions .h5 {
+  border: 0;
   border-top: 1px solid #d7e1ea;
   background: url(images/tabs_shadow.png) no-repeat center top/100% auto;
   position: relative;
   padding: 15px 0 10px;
   margin-bottom: 0;
+  font-size: 20px;
+  line-height: 145%;
+}
+#questions .questions .h5:first-child {
+  background: none;
+  border: 0;
 }
 #questions .questions .h5 .content {
   padding: 10px 50px;
@@ -2073,10 +2233,10 @@ footer #dev img {
   width: 12px;
   height: 12px;
   background: url(images/arr_bottom_blue.png) no-repeat center;
-  -webkit-transition: transform 0.3s ease-out 0s;
-  -moz-transition: transform 0.3s ease-out 0s;
-  -o-transition: transform 0.3s ease-out 0s;
-  transition: transform 0.3s ease-out 0s;
+  -webkit-transition: transform 0.6s ease-out 0s;
+  -moz-transition: transform 0.6s ease-out 0s;
+  -o-transition: transform 0.6s ease-out 0s;
+  transition: transform 0.6s ease-out 0s;
 }
 #questions .questions .h5.ui-state-active .ui-accordion-header-icon {
   -webkit-transform: rotate(-180deg);
@@ -2085,7 +2245,10 @@ footer #dev img {
   transform: rotate(-180deg);
 }
 #questions .questions .text {
+  border: 0;
   padding: 0px 50px;
+  color: #666666;
+  line-height: 162%;
 }
 
 /* end reviews styles */
@@ -2095,7 +2258,10 @@ footer #dev img {
   overflow: hidden;
   padding-top: 50px;
 }
-#contacts .h1, #contacts p, #contacts .tab_buttons {
+#contacts .in {
+  padding: 0 20px;
+}
+#contacts .in .h1, #contacts .in p, #contacts .in .tab_buttons {
   position: relative;
   z-index: 6;
   text-align: center;
@@ -2155,12 +2321,14 @@ footer #dev img {
   padding-bottom: 20px;
 }
 #contacts .map {
-  height: 560px;
+  height: 649px;
   position: relative;
   z-index: 1;
+  margin-top: -50px;
   background: url(images/map.jpg) no-repeat center bottom;
 }
 #contacts .map:before {
+  background: url(images/separator.png) no-repeat center bottom;
   height: 200px;
   content: "";
   position: absolute;
@@ -2168,6 +2336,22 @@ footer #dev img {
   width: 100%;
   left: 0;
   top: 0;
+}
+#contacts .points .point.smolensk {
+  top: 510px;
+  margin-left: 214px;
+}
+#contacts .points .point.yaroslavl {
+  top: 397px;
+  margin-left: 340px;
+}
+#contacts .points .point.moscow {
+  top: 580px;
+  margin-left: 598px;
+}
+#contacts .points .point.petersburg {
+  top: 240px;
+  margin-left: 255px;
 }
 
 @media screen and (max-width: 1600px) {

@@ -442,6 +442,149 @@ a.button {
 	}
 }
 
+.points {
+	position: relative;
+	max-width: $max-width;
+	height: 100%;
+	min-height: 500px;
+	margin: 0 auto;
+	
+	.point {
+		position: absolute;
+		min-height: 45px;
+		//overflow: hidden;
+		min-width: 45px;
+		line-height: 145%;
+		color: #fff;
+		padding-left: 12px;
+		left: 50%;
+		text-align: left;
+		
+		
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 5;
+			width: 45px;
+			height: 45px;
+			bottom: 0;
+			left: 0;
+			background: url(images/point_decor.png) no-repeat center top ;
+		}
+		
+		.hidden {
+			overflow: hidden;
+			display: block;
+			
+		}
+		
+		.content {
+			height: 39px;
+			box-sizing: border-box;
+			display: block;
+			background: url(images/point_bg.png) no-repeat right top ;
+			padding: 3px 20px 5px 20px;
+			font-family: $font_family_h;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 1px;
+		}
+		
+		.more_info {
+			position: absolute;
+			bottom: 27px;
+			left:12px;
+			width: 311px;
+			background: url(images/point_bg_big.png) no-repeat right top / 100%;
+			padding: 25px 25px 5px;
+			text-align:  left;
+			z-index: 10;
+			display: none;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				z-index: 5;
+				width: 100%;
+				height: 8px;
+				bottom: -8px;
+				right: -1px;
+				background: url(images/point_shadow_big.png) no-repeat center top ;
+			}
+			
+			.close {
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				top:20px;
+				right: 20px;
+				background: url(images/close.png) no-repeat center top ;
+				@include transition(transform);
+				cursor: pointer;
+	    
+				&:hover {
+				    -webkit-transform: rotate(-90deg);
+				    -moz-transform: rotate(-90deg);
+				    -o-transform: rotate(-90deg);
+				    transform: rotate(-90deg);
+				}
+			}
+			
+			h5 {
+				margin-bottom: 15px;
+				font-weight: 800;
+			}
+			
+			.cont {
+					
+				font-family: $font_family_os;
+				font-size: 14px;
+				line-height: 160%;
+				margin-bottom: 15px;
+				padding-left: 20px;
+				background: no-repeat left 4px;
+				font-weight: 300;
+				
+				&.address {
+					background-image: url(images/icon_address_white.png);
+				}
+				&.email {
+					background-image: url(images/icon_letter_white.png);
+				}
+			}
+			a {
+				color: #fff;
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	
+	.point.active {
+		
+		&:before {
+			z-index: 15;
+			width: 34px;
+			height: 62px;
+			left: 12px;
+			background: url(images/point_decor_big.png) no-repeat center top ;
+		}
+		
+		.hidden {
+			display: none;
+			
+		}
+		.more_info {
+			display: block;
+		}
+		
+	}
+		
+}
+
 
 .in {
 	padding: 10px 20px;

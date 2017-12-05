@@ -5,11 +5,14 @@
     overflow: hidden;
     padding-top: 50px;
     
-    
-    .h1, p, .tab_buttons {
-	position: relative;
-	z-index: 6;
-	text-align: center;
+    .in {
+	padding: 0 20px;
+	.h1, p, .tab_buttons {
+	    position: relative;
+	    z-index: 6;
+	    text-align: center;
+	}
+	
     }
     
     .tab_buttons {
@@ -79,16 +82,16 @@
     
     
     .map {
-	height: 560px;
+	height: 649px;
 	position: relative;
 	z-index: 1;
-	//margin-top: -50px;
+	margin-top: -50px;
 	
 	background: url(images/map.jpg) no-repeat center bottom;
 	
 	
 	&:before {
-	    //background: url(images/separator.png) no-repeat center bottom;
+	    background: url(images/separator.png) no-repeat center bottom;
 	    height: 200px;
 	    content: "";
 	    position: absolute;
@@ -96,6 +99,28 @@
 	    width: 100%;
 	    left: 0;
 	    top: 0;
+	}
+    }
+    
+    .points {
+	.point.smolensk {
+	    top: 510px;
+	    margin-left: 214px;
+	}
+	
+	.point.yaroslavl {
+	    top: 397px;
+	    margin-left: 340px;
+	}
+	
+	.point.moscow {
+	    top: 580px;
+	    margin-left: 598px;
+	}
+	
+	.point.petersburg {
+	    top: 240px;
+	    margin-left: 255px;
 	}
     }
 }
