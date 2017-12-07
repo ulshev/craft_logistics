@@ -118,7 +118,7 @@ $(document).ready(function() {
 	
 	$( function() {
 	    $( "#accordion" ).accordion({
-	      heightStyle: "content"
+	      heightStyle: "content",
 	    });
 	} );
 	
@@ -132,11 +132,29 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		fade: true,
 		adaptiveHeight: true,
-		prevArrow: '<span class="slick-prev"></span>',
-		nextArrow: '<span class="slick-next"></span>',
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		//appendDots: '.tab_dots'
 	});
 	
+	var timer = false;
+	$('.tab_dots li').click(function(){
+	  if(!timer){
+	    timer = true;
+	    var el = $(this);
+	    if(!el.hasClass('active')){
+	      var nextTab = el.index();
+	      $('.tab_dots .active').removeClass('active');
+	      $('.services_slider').slick('slickGoTo', nextTab);
+	      el.addClass('active');
+	    }
+	    setTimeout(function(){
+	      timer = false;
+	    }, 1500)
+	  }
+	  return false;
+	})
+	      
 	$('.sertificates_slider').slick({
 		dots: false,
 		arrows: true,
@@ -144,8 +162,8 @@ $(document).ready(function() {
 		speed: 1000,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: '<span class="slick-prev"></span>',
-		nextArrow: '<span class="slick-next"></span>',
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
 		  {
 		    breakpoint: 1000,
@@ -169,8 +187,8 @@ $(document).ready(function() {
 	});
 	
 	$('.clients_wrap').slick({
-	    prevArrow: '<span class="slick-prev"></span>',
-            nextArrow: '<span class="slick-next"></span>',
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+            nextArrow: '<span class="slick-next">&nbsp;</span>',
 	    //fade: true,
 	    speed: 1500,
 	    slidesToShow: 8,
@@ -214,8 +232,8 @@ $(document).ready(function() {
 		//slidesToScroll: 1,
 		centerMode: true,
 		 variableWidth: true,
-		prevArrow: '<span class="slick-prev"></span>',
-		nextArrow: '<span class="slick-next"></span>',
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
 		  {
 		    breakpoint: 1000,

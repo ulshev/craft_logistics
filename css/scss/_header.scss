@@ -60,7 +60,7 @@
 	text-align: center;
 	font-size: 18px;
 	font-weight: 300;
-	
+    }
         ul.main_menu {
 	    text-align: justify;
 	    &:after {
@@ -169,7 +169,6 @@
 		}
 	    }
         }
-    }
     
 }
 @media screen and (max-width: 1845px) {
@@ -184,13 +183,13 @@
 	    margin-left: 25px;
 	}
 	    
-	nav {
+	
 	    ul.main_menu {
 		>li {
 		    margin-right: 5px;
 		}
 	    }
-	}
+	
     }
 }
 @media screen and (max-width: 1600px) {
@@ -201,6 +200,7 @@
 	nav {
 	    clear: both;
 	    padding-top: 25px;
+	}
 	    
 	    ul.main_menu {
 		>li {
@@ -211,7 +211,6 @@
 		    padding-top: 25px;
 		}
 	    }
-	}
     }
 
 }
@@ -233,6 +232,7 @@
 	    height: 50px;
 	    position: absolute;
 	    margin: 0;
+	}
 	    
 	    .menu_button_mob {
 		height: 30px;
@@ -291,6 +291,7 @@
 		    height: auto;
 		    padding: 0 15px;
 		    margin-bottom: 5px;
+		}
 		    
 		    a {
 			display: inline-block;
@@ -300,7 +301,6 @@
 			    left: 50%;
 			}
 		    }
-		}
 		
 		ul {
 		    position: relative;
@@ -314,7 +314,6 @@
 		    }
 		}
 	    }
-	}
     }
 }
 
@@ -344,6 +343,7 @@
 	    width: 40px;
 	    height: 40px;
 	    right: 10px;
+	}
 	    
 	    .menu_button_mob {
 		height: 24px;
@@ -357,7 +357,6 @@
 		    top: 8px;
 		}
 	    }
-	}
     }
 }
 
@@ -394,6 +393,7 @@
 	    top: 50px;
 	    width: 30px;
 	    height: 30px;
+	}
 	    
 	    .menu_button_mob {
 		height: 18px;
@@ -407,7 +407,6 @@
 		    top: 6px;
 		}
 	    }
-	}
     }
 }
 

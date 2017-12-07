@@ -30,9 +30,12 @@
 	    display: block;
 	}
     }
+
+    
+}
     
     
-    .questions {
+    #accordion {
         margin-left: 480/1340*100%;
         //padding-top: 70px;
         padding-bottom: 1px;
@@ -46,6 +49,7 @@
 	    margin-bottom: 0;
 	    font-size: 20px;
 	    line-height: 145%;
+	    cursor: pointer;
 	    
 	    &:first-child {
 		background: none;
@@ -99,9 +103,6 @@
 	}
            
     }
-
-    
-}
 
 @media screen and (max-width: 1600px) {
     #questions {

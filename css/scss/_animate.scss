@@ -249,18 +249,18 @@
 
 @media screen and (min-width: 0px){
   
-  .hidden .mask {
+  .main_section.hidden .mask {
     display: inline-block;
     overflow: hidden;
   }
   
-  .mask .content {
+  .main_section .mask .content {
     display: block;
     transition: all 1s ease;
     transform: translateY(100%);
     opacity: 0;
   }
-  .hidden.animated .mask .content {
+  .main_section.hidden.animated .mask .content {
     transform: translateY(0);
     opacity: 1;
   }
