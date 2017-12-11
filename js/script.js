@@ -186,7 +186,7 @@ $(document).ready(function() {
 		]
 	});
 	
-	$('.clients_wrap').slick({
+	$('.main_section .clients_wrap').slick({
 	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
             nextArrow: '<span class="slick-next">&nbsp;</span>',
 	    //fade: true,
@@ -231,6 +231,38 @@ $(document).ready(function() {
 		//slidesToShow: 3,
 		//slidesToScroll: 1,
 		centerMode: true,
+		 variableWidth: true,
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
+		responsive: [
+		  {
+		    breakpoint: 1000,
+		    settings: {
+		      //slidesToShow: 3,
+		    }
+		  },
+		  {
+		    breakpoint: 600,
+		    settings: {
+		      //slidesToShow: 2,
+		    }
+		  },
+		  {
+		    breakpoint: 450,
+		    settings: {
+		      //slidesToShow: 1,
+		    }
+		  }
+		]
+	});
+	
+	$('.news_slider').slick({
+		dots: false,
+		arrows: true,
+		infinite: false,
+		speed: 1000,
+		slidesToShow: 3,
+		slidesToScroll: 1,
 		 variableWidth: true,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',

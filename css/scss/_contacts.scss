@@ -28,78 +28,49 @@
 	    background-image: url(images/tocont.png);
 	}
     }
+}  
     
-    .contacts_info {
-	background-color: #f8f8f8;
-	float: left;
-	width: 715/1920*100%;
-	min-height: 505px;
-	padding-top: 35px;
-	
+
 	.cont {
-	    margin-left: 115/713*100%;
-	    font-size: 20px;
-	    line-height: 145%;
-	    background-position: left center;
-	    background-repeat: no-repeat;
+	    background: no-repeat left 3px / 12px auto;
 	    margin-bottom: 0;
-	    padding: 10px 0;
-	    clear: left;
-	    margin-bottom: 10px;
+	    padding: 0 0 0 20px;
+	    margin-bottom: 15px;
+	    font-size: 14px;
+	    line-height: 145%;
 	    
-	    .icon {
-		width: 49px;
-		height: 49px;
-		margin-right: 20px;
-		padding: 5px;
-		border: 4px solid rgba(143, 171, 50, 0.4);
-		border-radius: 45px;
-		display: inline-block;
-		vertical-align: middle;
+	    &.address {
+		background-image: url(images/icon_address.png);
+	    }
+	    &.letter {
+		background-image: url(images/icon_letter.png);
+		background-position: left 7px;
+	    }
+	    &.tel {
+		background-image: url(images/icon_tel.png);
+		background-position: left 9px;
 		
-		img {
-		    width: 100%;
-		    height: 100%;
-		}
-	    }
-	    
-	    p {
-		display: inline-block;
-		vertical-align: middle;
-		width: 485/713*100%;
-		margin-bottom: 0px;
+		font-size: 18px;
 	    }
 	}
+    
+.map {
+    height: 649px;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    background: url(images/map.jpg) no-repeat center bottom;
 	
-	.button_block {
-	    margin-left: 115/713*100%;
-	    padding-left: 87px;
-	    padding-top: 10px;
-	    padding-bottom: 20px;
-	}
-    }
-    
-    
-    
-    .map {
-	height: 649px;
-	position: relative;
+	
+    &:before {
+	background: url(images/separator.png) no-repeat center bottom;
+        height: 200px;
+	content: "";
+        position: absolute;
 	z-index: 1;
-	margin-top: -50px;
-	
-	background: url(images/map.jpg) no-repeat center bottom;
-	
-	
-	&:before {
-	    background: url(images/separator.png) no-repeat center bottom;
-	    height: 200px;
-	    content: "";
-	    position: absolute;
-	    z-index: 1;
-	    width: 100%;
-	    left: 0;
-	    top: 0;
-	}
+	width: 100%;
+	left: 0;
+	top: 0;
     }
     
     .points {
@@ -121,6 +92,15 @@
 	.point.petersburg {
 	    top: 240px;
 	    margin-left: 255px;
+	}
+    }
+}
+
+.contacts_page {
+    
+    .map {
+	&:before {
+	    display: none;
 	}
     }
 }

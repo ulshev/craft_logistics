@@ -11,6 +11,8 @@
 	    display: none;
 	}
     }
+    
+}
     .clients_wrap {
 	padding: 40px 60px;
 	//margin-right: -10px;
@@ -20,7 +22,9 @@
     
     .client {
 	text-align: center;
-	
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 20px 40px;
 	
 	
 	img {
@@ -38,8 +42,6 @@
 	
 	
     }
-    
-}
 
 @media screen and (max-width: 1600px) {
     #clients {

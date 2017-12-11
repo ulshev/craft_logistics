@@ -4,6 +4,8 @@
     //background-color: #fff;
     z-index: 5;
     overflow: hidden;
+    position: relative;
+    min-height: 750px;
     
     &:after {
 	content: '';
@@ -12,8 +14,9 @@
 	top: 0;
 	height: 100%;
 	width: 793/1920*100%;
+	height: 830px;
 	background: url(images/questions_img.png) no-repeat left top / 100% auto ;
-	
+	max-width: 795px;
     }
     
     .in {
@@ -33,11 +36,12 @@
 
     
 }
-    
+    #accordion, #accordion+.button_block {
+        margin-left: 520/1340*100%;
+	margin-bottom: 30px;
+    }
     
     #accordion {
-        margin-left: 480/1340*100%;
-        //padding-top: 70px;
         padding-bottom: 1px;
 	
 	.h5 {
@@ -58,6 +62,8 @@
 	    
 	    .content {
 		padding: 10px 50px;
+		display: block;
+		position: relative
 	    }
 	    
 	    .count {

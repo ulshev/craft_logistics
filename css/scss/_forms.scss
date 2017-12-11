@@ -175,156 +175,27 @@
     }
     
 }
-#form1 {
-    z-index: 12;
+
+.contacts_page #letter {
+    margin-top: -160px;
 }
-#form2 {
-    z-index: 7;
-}
-#form3 {
-    z-index: 2;
-    input[type="text"] {
-	text-align: left;
-    }
-}
-    
+
+
+
+
 
 @media screen and (max-width: 1600px) {
-    .main_section.form {
-	.in {
-	    padding: 50px 20px 25px;
-	    z-index: 2;
-	}
-	
-	.h2 {
-	    font-size: 32px;
-	    line-height: 130%;
-	}
-	
-	p {
-	    font-size: 22px;
-	    line-height: 145%;
-	}
-	
-	.button_block {
-	    padding-top: 10px;
-	    padding-bottom: 30px
-	}
-    }
-    .form { 
-	input[type="text"], textarea, select {
-	    margin: 0 10px 30px;
-	    width: 337px;
-	    height: 42px;
-	    font-size: 16px;
-	}
-	
-	textarea, input.textarea {
-	    min-width: 660px;
-	    max-width: 660px;
-	    min-height: 42px;
-	    max-height: 42px;
-	}
-	
-    }
+    
+    
 }
 
 @media screen and (max-width: 1300px) and (min-width: 1000px) {
-    .main_section.form {
-	.in {
-	    padding: 40px 20px 15px;
-	    z-index: 2;
-	}
-	
-	.h2 {
-	    font-size: 29px;
-	    line-height: 130%;
-	}
-	
-	p {
-	    font-size: 20px;
-	    line-height: 145%;
-	}
-	
-	.button_block {
-	    padding-top: 10px;
-	    padding-bottom: 30px
-	}
-    }
-    .main_section.form { 
-	
-	input[type="text"], textarea, select {
-	    margin: 0 10px 30px;
-	    width: 287px;
-	    height: 40px;
-	    font-size: 16px;
-	}
-	
-	textarea, input.textarea {
-	    min-width: 580px;
-	    max-width: 580px;
-	    min-height: 40px;
-	    max-height: 40px;
-	}
-	
-	input[type="submit"], input[type="reset"] {
-	    width: 265px;
-	    font-size: 18px;
-	    font-weight: 400;
-	}
-    }
+    
+    
 }
 @media screen and (max-width: 999px) {
-    .main_section.form {
-	.in {
-	    padding: 30px 20px 5px;
-	    z-index: 2;
-	}
-	
-	.h2 {
-	    font-size: 29px;
-	    line-height: 130%;
-	}
-	
-	p {
-	    font-size: 20px;
-	    line-height: 145%;
-	}
-	
-	.button_block {
-	    padding-top: 10px;
-	    padding-bottom: 30px
-	}
-	
-    }
-    .form { 
-	form {
-	    padding-top: 0px;
-	}
-	
-	input[type="text"], textarea, select {
-	    margin: 0 10px 20px;
-	    width: 220px;
-	    font-size: 16px;
-	}
-	
-	textarea, input.textarea {
-	    min-width: 450px;
-	    max-width: 450px;
-	}
-	
-	input[type="submit"], input[type="reset"] {
-	    margin-right: 0;
-	    width: 200px;
-	    height: 50px;
-	    font-size: 16px;
-	    font-weight: 400;
-	}
-	
-	input[type="submit"]:active, input[type="reset"]:active {
-	    height: 48px;
-	}
-    }
+    
+    
 }
 
 
@@ -333,73 +204,15 @@
 //}
 
 @media screen and (max-width: 590px) {
-    .main_section.form {
-	
-	.h2 {
-	    font-size: 25px;
-	    line-height: 130%;
-	}
-	
-	p {
-	    font-size: 18px;
-	    line-height: 145%;
-	}
-	
-    }
-    .form { 
-	input[type="text"], textarea, select {
-	    width: 220px;
-	    font-size: 15px;
-	}
-	
-	textarea, input.textarea {
-	    min-width: 350px;
-	    max-width: 350px;
-	}
-    }
+    
+    
 }
 
 @media screen and (max-width: 450px) {
-    .main_section.form {
-	
-	.h2 {
-	    font-size: 22px;
-	    line-height: 130%;
-	}
-	
-	p {
-	    font-size: 16px;
-	    line-height: 145%;
-	}
-	
-    }
-    .form {
-	input[type="text"], textarea, select {
-	    width: 280px;
-	}
-	textarea, input.textarea {
-	    min-width: 280px;
-	    max-width: 280px;
-	}
-    }
-    #form3 input[type="text"] {
-	text-align: center;
-	
-    }
+    
+    
 }
 
-/* for IE9 */
-@media screen and (min-width:0\0) { 
-    .main_section.form {
-	background-attachment: inherit;
-    }
-}
 
-/* for IE10 & IE11 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
-    .main_section.form {
-	background-attachment: inherit;
-    }
-}
 
 /* end forms styles */
