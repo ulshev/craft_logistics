@@ -108,169 +108,31 @@
 @media screen and (max-width: 1600px) {
     #contacts {
 	
-	.contacts_info {
-	    min-height: 485px;
-	    padding-top: 35px;
-	    
-	    .cont {
-		margin-left: 20px;
-		font-size: 19px;
-		line-height: 145%;
-		margin-bottom: 10px;
-		
-		.icon {
-		    width: 45px;
-		    height: 45px;
-		    margin-right: 20px;
-		    padding: 5px;
-		}
-		
-		p {
-		    width: 500/713*100%;
-		}
-	    }
-	    
-	    .button_block {
-		margin-left: 20px;
-		padding-left: 87px;
-		padding-top: 10px;
-		padding-bottom: 20px;
-	    }
-	}
-	.map {
-	}
+	
     }  
 }
 
-@media screen and (max-width: 1300px) and (min-width: 1000px) {
+@media screen and (max-width: 1300px)  {
     #contacts {
-	.contacts_info {
-	    min-height: 465px;
-	    padding-top: 35px;
-	    
-	    .cont {
-		font-size: 17px;
-		line-height: 145%;
-		
-		.icon {
-		    width: 35px;
-		    height: 35px;
-		    margin-right: 10px;
-		    padding: 5px;
-		}
-		
-		p {
-		    width: 540/713*100%;
-		}
-	    }
-	    
-	    .button_block {
-		margin-left: 20px;
-		padding-left: 67px;
-		padding-top: 10px;
-		padding-bottom: 20px;
-	    }
-	}
-	.map {
-	}
+	
     } 
 }
 @media screen and (max-width: 999px) {
     #contacts {
-	.contacts_info {
-	    min-height: 375px;
-	    padding-top: 25px;
-	    width: 850/1920*100%;
-	    
-	    .cont {
-		font-size: 15px;
-		line-height: 145%;
-		margin-bottom: 0;
-		
-		.icon {
-		    width: 30px;
-		    height: 30px;
-		    margin-right: 10px;
-		    padding: 5px;
-		}
-		
-		p {
-		    width: 540/713*100%;
-		}
-	    }
-	    
-	    .button_block {
-		margin-left: 20px;
-		padding-left: 62px;
-		padding-top: 10px;
-		padding-bottom: 20px;
-		
-		.button {
-		    font-size: 14px;
-		    padding: 10px 30px 4px;
-		}
-	    }
-	}
-	.map {
-	}
+	
     } 
 }
 
 
 @media screen and (max-width: 800px) {
     #contacts {
-	.contacts_info {
-	    min-height: 375px;
-	    width: 50%;
-	}
-	.map {
-	    margin-left: 50%;
-	    height: 400px;
-	}
+	
     } 
 }
 
 @media screen and (max-width: 590px) {
     #contacts {
-	.contacts_info {
-	    min-height: inherit;
-	    padding-top: 25px;
-	    width: auto;
-	    float: none;
-	    
-	    .cont {
-		font-size: 13px;
-		line-height: 145%;
-		margin-bottom: 0;
-		padding: 0 0 10px;
-		
-		.icon {
-		    width: 25px;
-		    height: 25px;
-		    padding: 3px;
-		    border-width: 2px;
-		}
-		
-		p {
-		    width: 80%;
-		}
-	    }
-	    
-	    .button_block {
-		margin-left: 0px;
-		padding-left: 0px;
-		text-align: center;
-		
-		.button {
-		    font-size: 14px;
-		    padding: 10px 20px 4px;
-		}
-	    }
-	}
-	.map {
-	    margin-left: 0;
-	    height: 200px;
-	}
+	
     } 
 }
 
