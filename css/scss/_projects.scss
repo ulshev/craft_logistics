@@ -10,7 +10,7 @@
     margin-bottom: -224px;
     
     .in {
-        padding: 35px 0 40px;
+        padding: 35px 20px 40px;
     }
     
     .h1 {
@@ -27,12 +27,7 @@
     
     .slide {
         float: left;
-        //width: 380px;
-        //@include transition_slow(width);
-        //background-color: #fff;
-        //margin: 0 50px 50px;
         position: relative;
-        //box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
         height: 300px;
         @include transition_slow(all);
         
@@ -222,10 +217,42 @@
 }
 
 @media screen and (max-width: 1300px){
-    
+    .projects_slider {
+        min-height: 475px;
+        
+        .slide {
+            width: 340px;
+            margin: 0 50px 50px;
+        }
+    }
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1100px) {
+    .projects_slider, .projects {
+        .slide {
+            height: 200px;
+            
+            .info {
+                font-size: 18px;
+                padding: 20px 40px 20px 20px;
+            }
+        }
+    }
     
+    .projects_slider {
+        min-height: 375px;
+        
+        .slide {
+            width: 270px;
+            margin: 0 40px 50px;
+        }
+        .slick-center {
+            height: 325px;
+            
+            > div {
+                margin: 0 -60px 0;
+            }
+        }
+    }
     
 }
 @media screen and (max-width: 800px) {
@@ -236,7 +263,42 @@
 }
 
 @media screen and (max-width: 450px) {
-   
+    #projects {
+        padding-bottom: 170px;
+        margin-bottom: -170px;
+        
+        .in {
+            padding: 35px 20px 40px;
+        }
+    }
+    .projects_slider {
+        //margin-left: 0;
+        //margin-right: 0;
+        padding-top: 30px;
+        min-height: 275px;
+        
+        .slide {
+            width: 280px;
+            margin: 0 40px 40px;
+        }
+        .slick-center {
+            height: 225px;
+            
+            > div {
+                margin: 0 0px 0;
+            }
+        }
+    }
+    .projects_slider, .projects {
+        .slide {
+            height: 200px;
+            
+            .info {
+                font-size: 16px;
+                padding: 15px 35px 15px 15px;
+            }
+        }
+    }
 }
 
 /* end other jobs styles */

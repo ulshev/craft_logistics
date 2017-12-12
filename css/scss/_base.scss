@@ -607,7 +607,7 @@ a.button {
 .num {
 	position: absolute;
 	width: 157px;
-	height: 104px;
+	height: 114px;
 	top: 0;
 	left: 0;
 	
@@ -626,13 +626,33 @@ a.button {
 @media screen and (max-width: 1300px) {
     .num {
 	width: 137px;
-	height: 94px;
+	height: 104px;
     }
 }
 @media screen and (max-width: 1000px) {
     .num {
 	width: 117px;
+	height: 94px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .num {
+	width: 97px;
 	height: 84px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .num {
+	width: 87px;
+	height: 84px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .num {
+	width: 77px;
+	height: 74px;
     }
 }
 

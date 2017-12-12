@@ -34,7 +34,7 @@
 	    
 	    .content {
 		padding-left: 30px;
-		background: url(images/icon_address_blue.png) no-repeat left center ;
+		background: url(images/icon_address_blue.png) no-repeat left 3px ;
 	    }
 	}
     }
@@ -85,8 +85,15 @@
 @media screen and (max-width: 999px) {
     #custom_points {
 	.text {
-	    width: 540/1340*100%;
-	    margin-right: 140/1340*100%;
+	    width: 640/1340*100%;
+	    margin-right: 0%;
+	}
+	
+	ul {
+	    li {
+		font-size: 22px;
+		line-height: 130%;
+	    }
 	}
     }
 }
@@ -100,11 +107,48 @@
 
 @media screen and (max-width: 590px) {
     #custom_points {
+	padding-top: 130px;
+	padding-bottom: 50px;
+	background-position: 60% top;
+	.text {
+	    width: 1040/1340*100%;
+	}
 	
+	ul {
+	    li {
+		font-size: 20px;
+		line-height: 130%;
+	    }
+	}
+	
+	.points {
+	    display: none;
+	}
     }
 }
 
 @media screen and (max-width: 450px) {
+    
+    #custom_points {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-position: 55% top;
+	.text {
+	    width: 90%;
+	    //float: none;
+	}
+	
+	ul {
+	    li {
+		font-size: 20px;
+		line-height: 130%;
+	    }
+	}
+	
+	.points {
+	    display: none;
+	}
+    }
 }
 
 /* end action styles */

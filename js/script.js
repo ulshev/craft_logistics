@@ -180,7 +180,7 @@ $(document).ready(function() {
 		  {
 		    breakpoint: 450,
 		    settings: {
-		      slidesToShow: 1,
+		      slidesToShow: 2,
 		    }
 		  }
 		]
@@ -200,21 +200,21 @@ $(document).ready(function() {
 		}
 	    },
 	    {
-		breakpoint: 1000,
+		breakpoint: 1001,
 		settings: { 
 		    slidesToShow: 6,
 		    adaptiveHeight: false
 		}
 	    },
 	    {
-		breakpoint: 800,
+		breakpoint: 801,
 		settings: { 
 		    slidesToShow: 4,
 		    adaptiveHeight: true
 		}
 	    },
 	    {
-		breakpoint: 450,
+		breakpoint: 451,
 		settings: { 
 		    slidesToShow: 2,
 		    adaptiveHeight: true
@@ -242,15 +242,15 @@ $(document).ready(function() {
 		    }
 		  },
 		  {
-		    breakpoint: 600,
+		    breakpoint: 601,
 		    settings: {
 		      //slidesToShow: 2,
 		    }
 		  },
 		  {
-		    breakpoint: 450,
+		    breakpoint: 451,
 		    settings: {
-		      //slidesToShow: 1,
+		      slidesToShow: 1,
 		    }
 		  }
 		]
