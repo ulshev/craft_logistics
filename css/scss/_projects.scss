@@ -41,6 +41,10 @@
             position: relative;
             @include transition_slow(all);
             box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
+            
+            &:hover {
+                box-shadow: 0 20px 20px rgba(33, 97, 143, 0.7);
+            }
         }
         
         .bg_img {
@@ -94,6 +98,8 @@
             }
         }
     }
+}
+.projects_slider {
     .slick-center {
         //width: 540px;
         height: 425px;
@@ -103,6 +109,49 @@
             margin: 0 -80px 0;
         }
     }
+    
+    &.slick-slider {
+	.slick-arrow {
+		bottom: 110px;
+                top: auto;
+		&:hover:before {
+				border-top-color: rgba(255, 255, 255, 1);
+				border-bottom-color: rgba(255, 255, 255, 1); 
+			}
+	}
+	.slick-prev {
+		left: 50%;
+                margin-left: -320px;
+                background-position: 30% center;
+		
+		&:before {
+			margin-right: 0px;
+                        margin-left: -20px;
+			float: left;
+			border-top: 0; 
+			border-right: 0;
+                        border-bottom: 40px solid rgba(255, 255, 255, 0.5); 
+			border-left: 20px solid transparent;
+		}
+	}
+	.slick-next {
+		
+		right: 50%;
+                margin-right: -320px;
+                background-position: 70% center;
+		
+		&:before {
+			margin-right: -20px;
+                        margin-left: 0px;
+			float: right;
+			border-bottom: 0; 
+			border-left: 0;
+                        border-top: 40px solid rgba(255, 255, 255, 0.5); 
+			border-right: 20px solid transparent;
+		}
+	}
+	
+}
     
 }
 .projects_slider {

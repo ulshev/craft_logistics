@@ -15,7 +15,7 @@
     .h1 {
 	text-align: left;
 	line-height: 90%;
-	font-size: 50px;
+	//font-size: 50px;
     }
     
     ul {
@@ -26,6 +26,11 @@
 	    font-size: 25px;
 	    line-height: 130%;
 	    margin-bottom: 20px;
+	    padding-left: 0;
+	    
+	    &:before {
+		display: none;
+	    }
 	    
 	    .content {
 		padding-left: 30px;
@@ -63,21 +68,26 @@
     
 }
 
-@media screen and (max-width: 1600px) {
-    #custom_points {
+//@media screen and (max-width: 1600px) {
+//    #custom_points {
 	
-    }
-}
+//    }
+//}
 
 @media screen and (max-width: 1300px)  {
     #custom_points {
-	
+	.text {
+	    width: 440/1340*100%;
+	}
 	
     }
 }
 @media screen and (max-width: 999px) {
     #custom_points {
-	
+	.text {
+	    width: 540/1340*100%;
+	    margin-right: 140/1340*100%;
+	}
     }
 }
 

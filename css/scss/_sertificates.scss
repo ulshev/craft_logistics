@@ -43,6 +43,29 @@
             margin: 0 10px;
             width: 220px;
             box-shadow: 0 20px 10px rgba(33, 97, 143, 0.25);
+            position: relative;
+        }
+            
+        a {
+            display: inline-block;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent url(images/loupe.png) no-repeat center;
+                opacity: 0;
+                @include transition(all);
+                z-index: 2;
+            }
+            
+            &:hover:before {
+                background-color: rgba(4, 114, 178, 0.3);
+                opacity: 1;
+            } 
+            
         }
         
         img {
@@ -53,12 +76,12 @@
     
 }
 
-@media screen and (max-width: 1600px) {
-    #sertificates {
+//@media screen and (max-width: 1600px) {
+//    #sertificates {
         
         
-    }
-}
+//    }
+//}
 
 @media screen and (max-width: 1300px){
     #sertificates {
@@ -68,24 +91,25 @@
     
 }
 @media screen and (max-width: 999px) {
-    #sertificates {
-        .text {
-            width: auto;
-            float: none;
-            margin-bottom: 30px;
-        } 
-        .sertificates_slider {
-            margin-left: 0;
-        }
-    }
     
 }
 @media screen and (max-width: 800px) {
+    #sertificates {
+        .text {
+            width: 500/1340*100%;
+        } 
+        .sertificates_slider {
+            margin-left: 500/1340*100%;
+        }
+    }
 }
 
 @media screen and (max-width: 590px) {
     #sertificates {
         .text {
+            width: auto;
+            float: none;
+            margin-bottom: 30px;
             
             .h2 {
                 font-size: 18px;
@@ -103,6 +127,7 @@
         .sertificates_slider {
             margin: 0 -20px;
             padding: 0 1px;
+            margin-left: 0;
         }
     }
 }

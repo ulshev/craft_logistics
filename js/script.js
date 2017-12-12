@@ -31,12 +31,12 @@ $(document).ready(function() {
 		};
 	});
 	// открытие подменю
-	$('.main_menu .submenu a').on('click', function(e){
+	$('.main_menu .submenu a').on('mouseover', function(e){
 		if( !$(this).parent().hasClass('show') ) {
 			$(this).parent().addClass('show');
 			
 			$('.main_menu .submenu ul').slideDown(500);
-			e.preventDefault();
+			//e.preventDefault();
 		}
 	});
 	// закрытие подменю
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	$('').on('click', function(){
 		$('.submenu.active').removeClass('show');
 		$('.submenu').removeClass('show');
-		$('.main_menu').css('left', '100%');
+		//$('.main_menu').css('left', '100%');
 		$(this).removeClass('show');
 		setTimeout(function(){
 			$('.main_menu_wrap').removeClass('show');
@@ -91,7 +91,7 @@ $(document).ready(function() {
 	});
 	
 	
-	    if ( window.innerWidth>799 ) {
+	    if ( window.innerWidth>0 ) {
 		    $('.main_section').toggleClass("hidden");
 		    //$('#main_slide.hidden').addClass("animated");	
 	    };
@@ -172,7 +172,7 @@ $(document).ready(function() {
 		    }
 		  },
 		  {
-		    breakpoint: 600,
+		    breakpoint: 800,
 		    settings: {
 		      slidesToShow: 2,
 		    }

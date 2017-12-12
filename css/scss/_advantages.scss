@@ -45,29 +45,21 @@
     
 }
 
-@media advantages and (max-width: 1600px) {
-    #turnkey_work {
-	.advantages_block {
-	    padding-bottom: 20px;
-	    li {
-		padding: 20px 0px 10px 20px;
-		margin-bottom: 20px;
-	    }
-	}
-	
-    }
-}
+//@media advantages and (max-width: 1600px) {
+    
+//}
 
 @media screen and (max-width: 1300px){
     #advantages {
 	.advantages_block {
 	    li {
-		line-height: 145%;
-		font-size: 15px;
-		margin-bottom: 0px;
+		//line-height: 145%;
+		//font-size: 15px;
+		margin-bottom: 30px;
+		padding-left: 50px;
 		
-		h4 {
-		    font-size: 15px;
+		.num {
+		    top: 0px;
 		}
 	    }
 	}

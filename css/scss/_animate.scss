@@ -265,6 +265,19 @@
     opacity: 1;
   }
   
+  .hidden .num .content {
+    transform: translateX(-100%);
+    transition: all 1s ease;
+    opacity: 0;
+  }
+  .animated .num .content {
+    //-webkit-animation: slide 1s 0s both;
+    //-moz-animation: slide 1s 0s both;
+    //animation: slide 1s 0s both;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  
   #main_slide .mask {
     display: block;
   }
@@ -278,18 +291,34 @@
   #main_slide ul .mask .content {
     transition-delay: 0.5s;
   }
+  
+  
   #services.hidden .slick-slide .mask .content {
     transform: translateY(100%);
+    transition-delay: 0.5s;
   }
   #services.animated .slick-active .mask .content {
     transform: translateY(0%);
   }
   #services.hidden .image_block:before {
     width:100%;
+    transition-delay: 0.7s;
   }
   #services.animated .image_block:before {
     width:0;
   }
+  #services.hidden .slick-slide .num .content {
+    transform: translateX(-100%);
+    transition: all 1s ease;
+    transition-delay: 0.3s;
+    opacity: 0;
+  }
+  #services.animated .slick-active .num .content {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  
+  
   #services_items.hidden .serv_item > div {
     opacity: 0;
   }
@@ -300,31 +329,33 @@
     opacity: 1;
   }
   #services_items.animated .serv_item:nth-child(1) > div {
-    animation-delay: 0.3s;
-  }
-  #services_items.animated .serv_item:nth-child(2) > div {
     animation-delay: 0.5s;
   }
-  #services_items.animated .serv_item:nth-child(3) > div {
+  #services_items.animated .serv_item:nth-child(2) > div {
     animation-delay: 0.7s;
   }
-  #services_items.animated .serv_item:nth-child(4) > div {
+  #services_items.animated .serv_item:nth-child(3) > div {
     animation-delay: 0.9s;
   }
-  #services_items.animated .serv_item:nth-child(5) > div {
+  #services_items.animated .serv_item:nth-child(4) > div {
     animation-delay: 1.1s;
   }
+  #services_items.animated .serv_item:nth-child(5) > div {
+    animation-delay: 1.3s;
+  }
   
   
-  .hidden .num .content {
+  
+  #about.hidden .about_img {
     opacity: 0;
   }
-  .animated .num .content {
-    -webkit-animation: slide 1s 0s both;
-    -moz-animation: slide 1s 0s both;
-    animation: slide 1s 0s both;
+  #about.animated .about_img {
+    -webkit-animation: zoomIn 1s 0s both;
+    -moz-animation: zoomIn 1s 0s both;
+    animation: zoomIn 1s 0s both;
     opacity: 1;
   }
+  
   .hidden .sertificates_slider .slick-slide {
     overflow: hidden;
   }
@@ -374,6 +405,33 @@
   .animated .sertificates_slider .slick-slide:nth-child(12) img {
     animation-delay: 2.5s;
   }
+  
+  
+  .animated .advantages_block li:nth-child(1) .num .content {
+    transition-delay: 0.3s;
+  }
+  .animated .advantages_block li:nth-child(2) .num .content {
+    transition-delay: 0.5s;
+  }
+  .animated .advantages_block li:nth-child(3) .num .content {
+    transition-delay: 0.7s;
+  }
+  .animated .advantages_block li:nth-child(4) .num .content {
+    transition-delay: 0.9s;
+  }
+  .animated .advantages_block li:nth-child(5) .num .content {
+    transition-delay: 1.1s;
+  }
+  .animated .advantages_block li:nth-child(6) .num .content {
+    transition-delay: 1.3s;
+  }
+  .animated .advantages_block li:nth-child(7) .num .content {
+    transition-delay: 1.5s;
+  }
+  .animated .advantages_block li:nth-child(8) .num .content {
+    transition-delay: 1.7s;
+  }
+  
   
   
   
