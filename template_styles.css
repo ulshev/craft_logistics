@@ -1700,7 +1700,6 @@ footer #dev img {
   -o-transform: skew(-25deg);
   transform: skew(-25deg);
   overflow: hidden;
-  box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
   margin-bottom: 40px;
 }
 #services .image_block:before {
@@ -1733,6 +1732,9 @@ footer #dev img {
   -moz-transform: skew(25deg);
   -o-transform: skew(25deg);
   transform: skew(25deg);
+}
+#services .slick-active .image_block {
+  box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
 }
 #services .slick-active .image_block > div {
   -webkit-animation: slide 1s 0s both;
@@ -1767,6 +1769,9 @@ footer #dev img {
 }
 #services .slick-active .info .button_block {
   opacity: 1;
+}
+#services .slick-slider .slick-list {
+  height: auto;
 }
 #services .slick-slider .slick-arrow {
   top: 455px;

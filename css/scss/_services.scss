@@ -22,7 +22,7 @@
 	-o-transform: skew(-25deg);
 	transform: skew(-25deg);
 	overflow: hidden;
-	box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
+	//box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
 	margin-bottom: 40px;
 	    
 	    &:before {
@@ -61,11 +61,14 @@
 	}
     }
     
-    .slick-active .image_block > div  {
-	-webkit-animation: slide 1s 0s both;
-        -moz-animation: slide 1s 0s both;
-        animation: slide 1s 0s both;
-	animation-delay: 0.7s;
+    .slick-active .image_block {
+	box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
+	> div  {
+	    -webkit-animation: slide 1s 0s both;
+	    -moz-animation: slide 1s 0s both;
+	    animation: slide 1s 0s both;
+	    animation-delay: 0.7s;
+	}
     }
     
     .info {
@@ -101,6 +104,10 @@
     }
     
     .slick-slider {
+	
+	.slick-list {
+	    height: auto;
+	}
 
 	.slick-arrow {
 		top: 455px;
