@@ -12,7 +12,8 @@
 	}
     }
     .client {
-	margin-bottom: 0;
+	width: auto;
+	margin: 0 20px 0;
     }
     
 }
@@ -25,13 +26,15 @@
     
     .content_wrap .clients_wrap {
 	padding: 40px 0px;
+	text-align: center;;
     }
     
     .client {
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 20px 40px;
+	margin: 0 10px 40px;
+	width: 10.5%;
 	
 	
 	img {
@@ -52,9 +55,8 @@
 //}
 
 @media screen and (max-width: 1300px){
-    #clients {
-         
-        
+    .client {
+	width: 13%;
     }
     
 }
@@ -70,11 +72,14 @@
 	    //height: 180px;
 	}
     }
+    .client {
+	width: 19%;
+    }
 
 }
 @media screen and (max-width: 800px) {
-    #clients {
-	
+    .client {
+	width: 24%;
     }
     
 }
@@ -92,6 +97,7 @@
 @media screen and (max-width: 450px) {
     .client {
 	margin: 0 10px 40px;
+	width: 42%;
     }
 }
 

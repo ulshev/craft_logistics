@@ -38,9 +38,9 @@
 	font-size: 19px;
 	line-height: 145%;
         font-weight: 800;
-	background: url(images/icon_tel.png) left center no-repeat;
+	background: url(images/icon_tel.png) left 7px no-repeat;
 	padding-left: 32px;
-	padding-top: 5px;
+	margin-top: 5px;
 	font-family: $font_family_os;
         
         a.tel {
@@ -138,6 +138,7 @@
 		    height: 0px;
 		    width: 100%;
 		    padding: 0 15px;
+		    opacity: 0;
 		    background: #fff; /* for non-css3 browsers */
 
 		    background: -webkit-linear-gradient(top, transparent, #fff); /* для webkit-браузеров */
@@ -145,25 +146,41 @@
 		    background: -o-linear-gradient(top,  transparent,  #fff); /* для Opera 11.10+ */
 		    background: -ms-linear-gradient(top,  transparent,  #fff); /* для IE10+ */
 		    background: linear-gradient(to top, #fff, transparent);
-		    @include transition_slow(all);
+		    @include transition(all);
 		}
 	    }
 	    
-	    >li.submenu.show {
+	    //>li.submenu.show {
+		//&:after {
+		    //height: 50px;
+		//}
+	    //}
+	     
+	    
+	    li:hover{
 		&:after {
 		    height: 50px;
+		    opacity: 1;
+		}
+		ul {
+		    //display: block;
+		    height: auto;
+		    padding: 20px 15px 15px;
+		    opacity: 1;
 		}
 	    }
-	    
 	    ul {
 		position: absolute;
 		top: 100%;
 		width: 100%;
-		padding: 20px 15px 15px;
+		padding: 0px 15px 0px;
 		left: -15px;
 		background-color: #fff;
-		display: none;
-		
+		//display: none;
+		height: 0px;
+		@include transition(all);
+		overflow: hidden;
+		opacity: 0;
 		
 		
 		li {
@@ -311,6 +328,19 @@
 		    height: auto;
 		    padding: 0 15px;
 		    margin-bottom: 5px;
+		    
+		    &:hover {
+			//height: 0;
+			
+			&:after {
+			    display: none;
+			}
+			
+			ul {
+			    padding: 0 15px;
+			    margin: 0;
+			}
+		    }
 		}
 		    
 		    a {
@@ -327,7 +357,10 @@
 		    top: 0;
 		    padding: 0 15px;
 		    //left: 0;
-		    margin: 5px 0 10px;
+		    margin: 0px 0 0px;
+		    display: none;
+		    height: auto;
+		    opacity: 1;
 		    
 		    a {
 			display: block;

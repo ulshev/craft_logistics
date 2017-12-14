@@ -282,11 +282,11 @@ a.button {
 a.button:before, a.button:after {
   content: "";
   display: block;
-  margin-left: -30px;
+  margin-left: -29px;
   float: left;
   border-bottom: 40px solid #0472b2;
   border-left: 20px solid transparent;
-  border-radius: 1px 0px 0px 4px;
+  border-radius: 0px 0px 0px 4px;
   -webkit-transition: border-color 0.3s ease-out 0s;
   -moz-transition: border-color 0.3s ease-out 0s;
   -o-transition: border-color 0.3s ease-out 0s;
@@ -294,12 +294,12 @@ a.button:before, a.button:after {
 }
 a.button:after {
   margin-left: 0px;
-  margin-right: -30px;
+  margin-right: -29px;
   float: right;
   border: 0;
   border-top: 40px solid #0472b2;
   border-right: 20px solid transparent;
-  border-radius: 0px 4px 1px 0px;
+  border-radius: 0px 4px 0px 0px;
 }
 a.button:hover {
   background: #0589d6;
@@ -698,7 +698,7 @@ a.button:active:before, a.button:active:after {
 .points .point:before {
   content: "";
   position: absolute;
-  z-index: 5;
+  z-index: 1;
   width: 45px;
   height: 45px;
   bottom: 0;
@@ -717,6 +717,7 @@ a.button:active:before, a.button:active:after {
   padding: 3px 20px 5px 20px;
   font-family: "Antipasto Pro", "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 18px;
+  line-height: 26px;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -858,9 +859,9 @@ a.button:active:before, a.button:active:after {
   font-size: 19px;
   line-height: 145%;
   font-weight: 800;
-  background: url(images/icon_tel.png) left center no-repeat;
+  background: url(images/icon_tel.png) left 7px no-repeat;
   padding-left: 32px;
-  padding-top: 5px;
+  margin-top: 5px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 #header #headr_cont a.tel {
@@ -954,6 +955,7 @@ ul.main_menu > li.submenu:after {
   height: 0px;
   width: 100%;
   padding: 0 15px;
+  opacity: 0;
   background: #fff;
   /* for non-css3 browsers */
   background: -webkit-linear-gradient(top, transparent, #fff);
@@ -965,22 +967,34 @@ ul.main_menu > li.submenu:after {
   background: -ms-linear-gradient(top, transparent, #fff);
   /* для IE10+ */
   background: linear-gradient(to top, #fff, transparent);
-  -webkit-transition: all 0.6s ease-out 0s;
-  -moz-transition: all 0.6s ease-out 0s;
-  -o-transition: all 0.6s ease-out 0s;
-  transition: all 0.6s ease-out 0s;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
-ul.main_menu > li.submenu.show:after {
+ul.main_menu li:hover:after {
   height: 50px;
+  opacity: 1;
+}
+ul.main_menu li:hover ul {
+  height: auto;
+  padding: 20px 15px 15px;
+  opacity: 1;
 }
 ul.main_menu ul {
   position: absolute;
   top: 100%;
   width: 100%;
-  padding: 20px 15px 15px;
+  padding: 0px 15px 0px;
   left: -15px;
   background-color: #fff;
-  display: none;
+  height: 0px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  overflow: hidden;
+  opacity: 0;
 }
 ul.main_menu ul li {
   margin: 0 -15px;
@@ -1092,6 +1106,13 @@ ul.main_menu ul .active a {
     padding: 0 15px;
     margin-bottom: 5px;
   }
+  ul.main_menu > li:hover:after {
+    display: none;
+  }
+  ul.main_menu > li:hover ul {
+    padding: 0 15px;
+    margin: 0;
+  }
   ul.main_menu a {
     display: inline-block;
     padding-top: 15px;
@@ -1103,7 +1124,10 @@ ul.main_menu ul .active a {
     position: relative;
     top: 0;
     padding: 0 15px;
-    margin: 5px 0 10px;
+    margin: 0px 0 0px;
+    display: none;
+    height: auto;
+    opacity: 1;
   }
   ul.main_menu ul a {
     display: block;
@@ -2475,6 +2499,7 @@ footer #dev img {
 #custom_points .points .point.moscow {
   top: 511px;
   margin-left: -352px;
+  z-index: 2;
 }
 #custom_points .points .point.sheremetyevo {
   top: 473px;
@@ -2560,6 +2585,9 @@ footer #dev img {
 #about .h1 {
   text-align: left;
   line-height: 85%;
+}
+#about .h1 .content {
+  padding-bottom: 5px;
 }
 #about .text {
   padding-bottom: 50px;
@@ -2863,7 +2891,8 @@ footer #dev img {
   display: none;
 }
 #clients .client {
-  margin-bottom: 0;
+  width: auto;
+  margin: 0 20px 0;
 }
 
 .clients_wrap {
@@ -2872,13 +2901,15 @@ footer #dev img {
 
 .content_wrap .clients_wrap {
   padding: 40px 0px;
+  text-align: center;
 }
 
 .client {
   text-align: center;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 20px 40px;
+  margin: 0 10px 40px;
+  width: 10.5%;
 }
 .client img {
   max-width: 100%;
@@ -2887,6 +2918,11 @@ footer #dev img {
   display: inline-block;
 }
 
+@media screen and (max-width: 1300px) {
+  .client {
+    width: 13%;
+  }
+}
 @media screen and (max-width: 999px) {
   #clients .in {
     padding-bottom: 35px;
@@ -2895,6 +2931,15 @@ footer #dev img {
     padding-left: 40px;
     margin-right: -20px;
     margin-left: -20px;
+  }
+
+  .client {
+    width: 19%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .client {
+    width: 24%;
   }
 }
 @media screen and (max-width: 590px) {
@@ -2905,6 +2950,7 @@ footer #dev img {
 @media screen and (max-width: 450px) {
   .client {
     margin: 0 10px 40px;
+    width: 42%;
   }
 }
 /* end partners styles */
@@ -3226,7 +3272,7 @@ footer #dev img {
   width: 34px;
   height: 34px;
   text-align: center;
-  padding-top: 4px;
+  padding-top: 2px;
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -3252,6 +3298,9 @@ footer #dev img {
   -moz-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg);
+}
+#accordion .h5.ui-state-active .count {
+  background-image: url(images/count_bg_active.png);
 }
 #accordion .h5:hover {
   color: #008cbf;
@@ -3489,7 +3538,7 @@ footer #dev img {
 }
 .text ul li {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding-left: 20px;
 }
 .text ul li:before {

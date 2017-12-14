@@ -31,14 +31,16 @@ $(document).ready(function() {
 		};
 	});
 	// открытие подменю
-	$('.main_menu .submenu a').on('mouseover', function(e){
+	if ($(window).width() < 1550) {
+	$('.main_menu .submenu a').on('click', function(e){
 		if( !$(this).parent().hasClass('show') ) {
 			$(this).parent().addClass('show');
 			
-			$('.main_menu .submenu ul').slideDown(500);
-			//e.preventDefault();
+			$(this).parent().children('ul').slideDown(500);
+			e.preventDefault();
 		}
 	});
+	}
 	// закрытие подменю
 	$('body').click(function (event) {
 	    if ($(event.target).closest('.main_menu .submenu').length == 0 ) {
@@ -73,10 +75,11 @@ $(document).ready(function() {
 	
 	$(window).resize(function(){
 	        var width = $(window).width();
-		if (width < 1000) {
+		if (width < 1550) {
 			$('.main_menu').css("display", "none");
 		}else{
 			$('.main_menu').attr('style', '');
+			$('.submenu ul').attr('style', '');
 		}
 	});
 	
