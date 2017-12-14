@@ -72,7 +72,7 @@ body {
   font-size: 14px;
   line-height: 162.5%;
   font-weight: 400;
-  color: #666666;
+  color: #000;
 }
 
 .wrapper {
@@ -268,7 +268,7 @@ a.button {
   text-decoration: none;
   font-size: 16px;
   line-height: 40px;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Antipasto Pro", "Open Sans", Arial, Helvetica, sans-serif;
   letter-spacing: 0.9px;
   color: #fff;
@@ -286,7 +286,7 @@ a.button:before, a.button:after {
   float: left;
   border-bottom: 40px solid #0472b2;
   border-left: 20px solid transparent;
-  border-radius: 1px 0px 0px 3px;
+  border-radius: 1px 0px 0px 4px;
   -webkit-transition: border-color 0.3s ease-out 0s;
   -moz-transition: border-color 0.3s ease-out 0s;
   -o-transition: border-color 0.3s ease-out 0s;
@@ -299,7 +299,7 @@ a.button:after {
   border: 0;
   border-top: 40px solid #0472b2;
   border-right: 20px solid transparent;
-  border-radius: 0px 1px 3px 0px;
+  border-radius: 0px 4px 1px 0px;
 }
 a.button:hover {
   background: #0589d6;
@@ -513,8 +513,10 @@ a.button:active:before, a.button:active:after {
   color: #008dbf;
 }
 .tab_dots li .content {
-  padding-top: 5px;
+  padding: 5px 2px 0 0px;
   box-sizing: border-box;
+  letter-spacing: 0.5;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 .tab_dots li .icon {
   background: center left no-repeat;
@@ -632,7 +634,7 @@ a.button:active:before, a.button:active:after {
 .num {
   position: absolute;
   width: 157px;
-  height: 114px;
+  height: 120px;
   top: 0;
   left: 0;
 }
@@ -863,7 +865,7 @@ a.button:active:before, a.button:active:after {
 }
 #header #headr_cont a.tel {
   text-decoration: none;
-  color: #666666;
+  color: #000;
   -webkit-transition: color 0.3s ease-out 0s;
   -moz-transition: color 0.3s ease-out 0s;
   -o-transition: color 0.3s ease-out 0s;
@@ -914,7 +916,7 @@ ul.main_menu a {
   position: relative;
   z-index: 2;
   text-decoration: none;
-  color: #666666;
+  color: #000;
   -webkit-transition: color 0.3s ease-out 0s;
   -moz-transition: color 0.3s ease-out 0s;
   -o-transition: color 0.3s ease-out 0s;
@@ -1573,7 +1575,7 @@ footer #dev img {
 }
 #main_slide ul li a {
   display: inline-block;
-  color: #666666;
+  color: #000;
 }
 #main_slide ul li a:hover {
   color: #008dbf;
@@ -1782,6 +1784,9 @@ footer #dev img {
   position: relative;
   padding-top: 45px;
   opacity: 1 !important;
+  content: "";
+  display: block;
+  clear: both;
 }
 #services .image_block {
   float: right;
@@ -2030,7 +2035,7 @@ footer #dev img {
   display: block;
   width: 100%;
   height: 100%;
-  color: #666666;
+  color: #000;
   text-decoration: none;
 }
 .services_items .serv_item a:hover, .services_items .adv a:hover {
@@ -3252,7 +3257,7 @@ footer #dev img {
 #accordion .text {
   border: 0;
   padding: 0px 50px;
-  color: #666666;
+  color: #000;
   line-height: 162%;
 }
 
@@ -3334,14 +3339,14 @@ footer #dev img {
   font-size: 18px;
 }
 
-.map {
+.map, #map {
   height: 649px;
   position: relative;
   z-index: 1;
   margin-top: -50px;
   background: url(images/map.jpg) no-repeat center bottom;
 }
-.map:before {
+.map:before, #map:before {
   background: url(images/separator.png) no-repeat center bottom;
   height: 200px;
   content: "";
@@ -3349,8 +3354,9 @@ footer #dev img {
   z-index: 1;
   width: 100%;
   left: 0;
-  top: 0;
+  top: -60px;
 }
+
 .map .points .point.smolensk {
   top: 510px;
   margin-left: 214px;
@@ -3715,7 +3721,7 @@ footer #dev img {
   margin-bottom: 20px;
 }
 .contacts_page .cont_block a {
-  color: #666666;
+  color: #000;
 }
 
 .about .content_wrap {
@@ -3803,7 +3809,7 @@ footer #dev img {
   box-shadow: 0 20px 20px rgba(33, 97, 143, 0.7);
 }
 .news_slider .new:hover .info p {
-  color: #666666;
+  color: #000;
 }
 
 .block404 {
@@ -4039,7 +4045,7 @@ footer #dev img {
   max-width: 540px;
 }
 #letter form a {
-  color: #666666;
+  color: #000;
   text-decoration: underline;
 }
 #letter form a:hover {
@@ -4062,7 +4068,7 @@ footer #dev img {
   font-size: 14px;
   font-weight: 400;
   line-height: 35px;
-  color: #666666;
+  color: #000;
   vertical-align: middle;
   box-sizing: border-box;
   /* Firefox 19+ */
@@ -4871,7 +4877,7 @@ footer #dev img {
   font-weight: 400;
 }
 .m_window .window_block a {
-  color: #666666;
+  color: #000;
   text-decoration: underline;
 }
 .m_window .window_block a:hover {

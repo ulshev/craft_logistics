@@ -9,6 +9,8 @@
 	position: relative;
 	padding-top: 45px;
 	opacity: 1!important;
+	@include clear();
+	
     }
     
     .image_block {

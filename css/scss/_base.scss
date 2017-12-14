@@ -8,8 +8,8 @@ footer, header, hgroup, menu, nav, section {
 $font_family_os: 'Open Sans', Arial, Helvetica, sans-serif;
 $font_family_h: 'Antipasto Pro', 'Open Sans', Arial, Helvetica, sans-serif;
 
-$color_text: #666666;
-$color_h: #1f1f1f;
+$color_text: #000; //#666666;
+$color_h: #000; //#1f1f1f;
 $color_a: #008dbf;
 $max-width: 1340px;
 
@@ -296,7 +296,7 @@ a.button {
 	
 	font-size: 16px;
 	line-height: 40px;
-        font-weight: 400;
+        font-weight: 300;
 	font-family: $font_family_h;
 	letter-spacing: 0.9px;
 	color: #fff;
@@ -314,7 +314,7 @@ a.button {
 		float: left;
 		border-bottom: 40px solid #0472b2; 
 		border-left: 20px solid transparent;
-		border-radius: 1px 0px 0px 3px;
+		border-radius: 1px 0px 0px 4px;
 		@include transition(border-color);
 	}
 	&:after {
@@ -324,7 +324,7 @@ a.button {
 		border: 0;
 		border-top: 40px solid #0472b2; 
 		border-right: 20px solid transparent;
-		border-radius: 0px 1px 3px 0px;
+		border-radius: 0px 4px 1px 0px;
 	}
 	&:hover {
 		background: #0589d6;
@@ -548,9 +548,11 @@ a.button {
 		}
 		
 		.content {
-			padding-top: 5px;
+			padding: 5px 2px 0 0px;
 			//min-height: 45px;
 			box-sizing: border-box;
+			letter-spacing: 0.5;
+			text-shadow: 0 0 1px rgba(0,0,0,0.2);
 		}
 		.icon {
 			background: center left no-repeat;
@@ -689,7 +691,7 @@ a.button {
 .num {
 	position: absolute;
 	width: 157px;
-	height: 114px;
+	height: 120px;
 	top: 0;
 	left: 0;
 	
