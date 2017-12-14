@@ -1784,6 +1784,8 @@ footer #dev img {
   position: relative;
   padding-top: 45px;
   opacity: 1 !important;
+}
+#services .slide:after {
   content: "";
   display: block;
   clear: both;

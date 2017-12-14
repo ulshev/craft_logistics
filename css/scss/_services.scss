@@ -9,7 +9,9 @@
 	position: relative;
 	padding-top: 45px;
 	opacity: 1!important;
+	&:after {
 	@include clear();
+	}
 	
     }
     
