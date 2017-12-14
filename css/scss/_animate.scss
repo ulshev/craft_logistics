@@ -289,20 +289,20 @@
     transform: translateY(0%);
   }
   #main_slide ul .mask .content {
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
   }
   
   
   #services.hidden .slick-slide .mask .content {
     transform: translateY(100%);
-    transition-delay: 0.5s;
+    transition-delay: 0.4s;
   }
   #services.animated .slick-active .mask .content {
     transform: translateY(0%);
   }
   #services.hidden .image_block:before {
     width:100%;
-    transition-delay: 0.7s;
+    transition-delay: 0.5s;
   }
   #services.animated .image_block:before {
     width:0;
@@ -329,19 +329,19 @@
     opacity: 1;
   }
   #services_items.animated .serv_item:nth-child(1) > div {
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
   }
   #services_items.animated .serv_item:nth-child(2) > div {
-    animation-delay: 0.7s;
+    animation-delay: 0.4s;
   }
   #services_items.animated .serv_item:nth-child(3) > div {
-    animation-delay: 0.9s;
+    animation-delay: 0.7s;
   }
   #services_items.animated .serv_item:nth-child(4) > div {
-    animation-delay: 1.1s;
+    animation-delay: 0.8s;
   }
   #services_items.animated .serv_item:nth-child(5) > div {
-    animation-delay: 1.3s;
+    animation-delay: 0.9s;
   }
   
   
@@ -370,66 +370,66 @@
   }
   
   .animated .sertificates_slider .slick-slide:nth-child(1) img {
-    animation-delay: 0.3s;
+    animation-delay: 0.1s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(2) img {
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(3) img {
-    animation-delay: 0.7s;
+    animation-delay: 0.3s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(4) img {
-    animation-delay: 0.9s;
+    animation-delay: 0.4s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(5) img {
-    animation-delay: 1.1s;
+    animation-delay: 0.5s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(6) img {
-    animation-delay: 1.3s;
+    animation-delay: 0.6s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(7) img {
-    animation-delay: 1.5s;
+    animation-delay: 0.7s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(8) img {
-    animation-delay: 1.7s;
+    animation-delay: 0.8s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(9) img {
-    animation-delay: 1.9s;
+    animation-delay: 0.9s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(10) img {
-    animation-delay: 2.1s;
+    animation-delay: 1.0s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(11) img {
-    animation-delay: 2.3s;
+    animation-delay: 1.1s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(12) img {
-    animation-delay: 2.5s;
+    animation-delay: 1.2s;
   }
   
   
   .animated .advantages_block li:nth-child(1) .num .content {
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
   }
   .animated .advantages_block li:nth-child(2) .num .content {
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
   }
   .animated .advantages_block li:nth-child(3) .num .content {
-    transition-delay: 0.7s;
+    transition-delay: 0.3s;
   }
   .animated .advantages_block li:nth-child(4) .num .content {
-    transition-delay: 0.9s;
+    transition-delay: 0.4s;
   }
   .animated .advantages_block li:nth-child(5) .num .content {
-    transition-delay: 1.1s;
+    transition-delay: 0.6s;
   }
   .animated .advantages_block li:nth-child(6) .num .content {
-    transition-delay: 1.3s;
+    transition-delay: 0.7s;
   }
   .animated .advantages_block li:nth-child(7) .num .content {
-    transition-delay: 1.5s;
+    transition-delay: 0.8s;
   }
   .animated .advantages_block li:nth-child(8) .num .content {
-    transition-delay: 1.7s;
+    transition-delay: 0.9s;
   }
   
   
@@ -449,40 +449,40 @@
   }
   
   .animated .sertificates_slider .slick-slide:nth-child(1) img {
-    animation-delay: 0.3s;
+    animation-delay: 0.1s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(2) img {
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(3) img {
-    animation-delay: 0.7s;
+    animation-delay: 0.3s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(4) img {
-    animation-delay: 0.9s;
+    animation-delay: 0.4s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(5) img {
-    animation-delay: 1.1s;
+    animation-delay: 0.5s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(6) img {
-    animation-delay: 1.3s;
+    animation-delay: 0.6s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(7) img {
-    animation-delay: 1.5s;
+    animation-delay: 0.7s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(8) img {
-    animation-delay: 1.7s;
+    animation-delay: 0.8s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(9) img {
-    animation-delay: 1.9s;
+    animation-delay: 0.9s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(10) img {
-    animation-delay: 2.1s;
+    animation-delay: 1.0s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(11) img {
-    animation-delay: 2.3s;
+    animation-delay: 1.1s;
   }
   .animated .sertificates_slider .slick-slide:nth-child(12) img {
-    animation-delay: 2.5s;
+    animation-delay: 1.2s;
   }
   
   

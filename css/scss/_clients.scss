@@ -23,6 +23,10 @@
 	//height: 180px;
     }
     
+    .content_wrap .clients_wrap {
+	padding: 40px 0px;
+    }
+    
     .client {
 	text-align: center;
 	display: inline-block;
@@ -86,10 +90,9 @@
 }
 
 @media screen and (max-width: 450px) {
-   #clients {
-        
+    .client {
+	margin: 0 10px 40px;
     }
-
 }
 
 /* end partners styles */

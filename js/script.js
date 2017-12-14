@@ -99,7 +99,7 @@ $(document).ready(function() {
 	
 	$(window).on('load scroll', function(){
 		$('.main_section').each(function(){
-		    if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.3 ) ) {
+		    if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.6 ) ) {
 			$(this).addClass('animated');
 		    }	
 		});
@@ -119,6 +119,8 @@ $(document).ready(function() {
 	$( function() {
 	    $( "#accordion" ).accordion({
 	      heightStyle: "content",
+	      collapsible: true,
+	      active: false
 	    });
 	} );
 	

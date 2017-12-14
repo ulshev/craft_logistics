@@ -534,7 +534,7 @@ a.button {
 	li {
 		display: inline-block;
 		padding: 25px 5px 0;
-		margin: 0 30px;
+		margin: 0 0px;
 		cursor: pointer;
 		font-family: $font_family_h;
 		font-size: 17px;
@@ -580,6 +580,24 @@ a.button {
 			}
 		}
 	}
+	
+	.tab_buttons_in {
+		> span {
+			max-width: 185px;
+			font-size: 18px;
+			line-height: 120%;
+			padding: 0;
+			.mask {
+				line-height: 88px;
+				min-height: 85px;
+			}
+			
+			.content {
+				padding: 10px 10px;
+			}
+		}
+		
+	}
 }
 @media screen and (max-width: 1000px) {
 	.tab_buttons, .tab_buttons_in {
@@ -600,6 +618,70 @@ a.button {
 				height: 25px;
 			}
 		}
+	}
+	
+	.tab_buttons_in {
+		padding-top: 15px;
+		
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+		> span {
+			max-width: none;
+			width: 33%;
+			height: auto;
+			font-size: 18px;
+			line-height: 120%;
+			padding: 0;
+			float: left;
+			clear: right;
+			
+			.mask {
+				line-height: 65px;
+				min-height: 65px;
+			}
+			
+			.content {
+				padding: 10px 30px;
+			}
+		}
+		
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+	.tab_buttons_in {
+		padding-top: 15px;
+		
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+		> span {
+			max-width: none;
+			width: 37%;
+			height: auto;
+			font-size: 16px;
+			line-height: 120%;
+			
+			&:last-child {
+				width: 25%;
+			}
+			
+			.mask {
+				line-height: 65px;
+				min-height: 65px;
+			}
+			
+			.content {
+				padding: 10px 15px;
+			}
+		}
+		
 	}
 }
 

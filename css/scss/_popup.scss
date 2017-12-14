@@ -1,415 +1,110 @@
 /* start popups styles */
 
-.popup {
-    background-color: rgba(0, 0, 0, 0.25);
+.m_window {
+    background-color: rgba(0, 0, 0, 0.5);
     
-    .gUniFormModalWindowContainer {
-        border-radius: 0px;
-        background: #fff;
-        padding: 0;
-        width: 700px;
-        background-color: #f2f2f2;
-        width: 90%;
-        max-width: 1230px;
-    }                
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
     
-        
-    &.product_more .gUniFormModalWindowContainer {
-        max-width: 1243px;
-    }
-     &.sent .gUniFormModalWindowContainer {
-        max-width: 930px;
-        padding-top: 20px;
-        padding-bottom: 30px;
-    }
-    .gUniFormModalWindowExit {
-        width: 26px;
-        height: 27px;
-        top: 10px;
-        right: 10px;
-        background: url("images/popup_close.png") no-repeat scroll 0 0;
-        
-        
-        &:hover {
-            background-position: 100% 0;
-        }
-    }
-    
-    .uFormLine {
-        display: inline-block;
-        width: 30%;
-        margin: 0 1.5%;
-        overflow: hidden;
-        
-        input {
-            max-width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-    
-    .uFormHeading, .h3 {
-        font-family: $font_family_os;
-        color: $color_a;
-        text-transform: uppercase;
-        font-size: 22px;
-        font-weight: 700;
-    }
-    
-    .uFormHeading {
-        padding-top: 30px;
-        font-size: 31px;
-    }
-    
-    &.product_more .uFormHeading {
-        font-size: 22px;
-    }
-    
-    p {
-        max-width: 1000px;
-        margin: 30px auto 20px;
-        font-size: 30px;
-        line-height: 130%;
-        text-align:  center;
-    }
-    
-    .eFormRequired {
-        font-size: 16px;
-        text-align: left;
-        max-width: 770px;
-        padding: 5px 20px;
-        margin: 0 auto;
-    }
-    
-    .detailed_info {
-        padding: 30px 20px 30px 60px;
-        background-color: #fff;
-        
-        &:after {
-	    @include clear();
-	}
-        
-        .img {
-            float: left;
-            width: 317/1243*100%;
-            text-align: center;
-            
-            img {
-                max-width: 90%;
-            }
-        }
-        
-        .text {
-            margin-left: 334/1243*100%;
-            max-height: 350px;
-        }
-        
-        .h3 {
-            margin-bottom: 25px;
-        }
-        
-        li {
-	    background: none;
-	    margin-bottom: 5px;
-	    padding-left: 13px;
-	    position: relative;
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 130%;
+    .window_block {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 570px;
+	height: 410px;
+	box-sizing: border-box;
+	padding: 50px 50px;
+	background: url(images/m_window_bg.jpg) no-repeat center bottom/ cover;
+	
+	.close {
+	    position: absolute;
+	    width: 40px;
+	    height: 40px;
+	    top:50px;
+	    right: 0px;
+	    cursor: pointer;
+	    background-color: rgba(255, 255, 255, 0.6);
+	    text-indent: -100000px;
 	    
 	    &:before {
-		content: '';
-		font-size: 0;
-		border: 2px solid $color_a;
 		position: absolute;
-		top: 9px;
-		left: 0;
+		content: "";
+		width: 14px;
+		height: 14px;
+		top: 14px;
+		right: 15px;
+		background: url(images/close_black.png) no-repeat center top ;
+		@include transition(transform);
+	    }
+	    
+	    &:after {
+		content: "";
+		display: block;
+		margin-left: -20px;
+		float: left;
+		border-bottom: 40px solid rgba(255, 255, 255, 0.6); 
+		border-left: 20px solid transparent;
+		}
+	    
+	    &:hover:before {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 	    }
 	}
-        
-        .description {
-	    span {
-		    display: inline-block;
-		    box-sizing: border-box;
-		    padding: 7px 0 7px 45px;
-		    background-position: left center;
-		    background-repeat: no-repeat;
-		    margin-bottom: 20px;
-                    margin-right: 20px;      
-		    
-		    &.people {
-			background-image: url(images/icon_people.png);
-		    }
-		    &.electricity {
-			background-image: url(images/icon_electricity.png);
-		    }
-		    &.throughput {
-			background-image: url(images/icon_throughput.png);
-		    }
-		    &.max-volume {
-			background-image: url(images/icon_max-volume.png);
-		    }
-		    &.mounting {
-			background-image: url(images/icon_mounting.png);
-		    }
-		    &.volume {
-			background-image: url(images/icon_volume.png);
-		    }
+	
+	h3 {
+	    margin-bottom: 25px; 
+	    color: #000;
+	    font-weight: 400;
+	}
+	
+	a {
+	    color: $color_text;
+	    text-decoration: underline;
+	    
+	    &:hover {
+		text-decoration: none;
 	    }
 	}
     }
     
-    
-    .mCSB_container {
-        padding-right: 50px;
-    }
-    .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools, .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
-        opacity: 1;
-        background-color: #f2f2f2;
-        width: 17px;
-        border-radius: 9px;
-    }
-    
-    .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-        width: 17px;
-        border-radius: 9px;
-        background-color: #999999;
+    .sended_block {
+	h3 {
+	    font-size: 65px;
+	    line-height: 95%;
+	    padding-top: 30px;
+	}
+	
+	p {
+	    font-size: 18px;
+	    line-height: 160%;
+	    max-width: 340px;
+	}
     }
     
-    .button_block {
-        text-align: center;
-        padding-top: 20px;
-        
-        .button {
-            width: 140px;
-        }
-    }
-    
-    &.form {
-        
-        
-        form {
-            padding: 20px 60px 35px;
-            text-align:  center;
-        }
-        
-        &.product_more form {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        
-        input, textarea, select {
-            color: #222;
-            border-bottom-color: #818181;
-            width: 259px;
-            
-            &:focus {
-                border-color: transparent;
-                border-bottom-color: #818181;
-                background: transparent;
-            }
-        
-            &::-webkit-input-placeholder {opacity: 1; color: #333;}
-            &::-moz-placeholder          {opacity: 1; color: #333;}/* Firefox 19+ */
-            &:-moz-placeholder           {opacity: 1; color: #333;}/* Firefox 18- */
-            &:-ms-input-placeholder      {opacity: 1; color: #333;}   
-        }
-        
-        .gUniForm .uFormButton {
-           float: none;
-           display: inline-block;
-           width: auto;
-           margin-bottom: 30px;
-           
-           .button {
-                line-height: 22px;
-                background-color: #ed6e2e;
-                
-                &:hover {
-                    background-color: #d1632b;
-                }
-                &:active {
-                    position: static;
-                    height: 53px;
-                }
-           }
-        }
-    }
-    
-    &.green {
-        .gUniFormModalWindowContainer {
-            color: #fff;
-            background-color: $color_a;
-        }
-        
-        .uFormHeading {
-            color: #fff;
-        }
-        
-        &.form {
-            
-            input, textarea, select {
-                border-bottom-color: #fff;
-                
-                &:focus {
-                    border-bottom-color: #fff;
-                }
-            
-                &::-webkit-input-placeholder {color: #fff;}
-                &::-moz-placeholder          {color: #fff;}/* Firefox 19+ */
-                &:-moz-placeholder           {color: #fff;}/* Firefox 18- */
-                &:-ms-input-placeholder      {color: #fff;}   
-            }
-        }
-        
-    }
 }
 
 @media screen and (max-width: 1000px) {
-    .popup {
-        .uFormHeading {
-            padding-top: 20px;
-            font-size: 25px;
-        }
-        
-        &.product_more .uFormHeading {
-            font-size: 22px;
-        }
-        
-        .gUniFormModalWindowExit {
-            top: 5px;
-            right: 5px;
-        }
-        
-        p {
-            margin: 20px;
-            font-size: 22px;
-            line-height: 130%;
-        }
-        
-        .eFormRequired {
-            font-size: 13px;
-        }
-        .detailed_info {
-            padding: 20px;
-            
-            li {
-                font-size: 14px;
-                line-height: 130%;
-                margin-bottom: 10px;
-            }
-            
-            .description {
-		    span {
-			padding: 7px 0 7px 35px;
-			margin-bottom: 5px;
-			background-size: 24px auto;
-		    }
-		}
-        }
-        
-        &.form {
-            form {
-                padding: 0px 0 25px;
-            }
-        }
-        
-        .uFormLine {
-            width: 29%;
-            
-            input {
-                margin-bottom: 10px;
-            }
-        }
-    }
+    
 }
 
 @media screen and (max-width: 800px) {
-    .popup {
-        .uFormHeading {
-            font-size: 22px;
-        }
-        
-        &.product_more .uFormHeading {
-            font-size: 22px;
-        }
-        
-        p {
-            font-size: 17px;
-            line-height: 130%;
-        }
-        .detailed_info {
-            .img {
-                display: none;
-            }
-            .text {
-                margin-left: 0;
-            }
-        }
-        .mCSB_container {
-            padding-right: 30px;
-        }
-        .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools, .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
-            width: 10px;
-        }
-        
-        .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-            width: 10px;
-        }
-        .uFormLine {
-            width: 45%;
-        }
-    }
+    
 }
 
 @media screen and (max-width: 450px) {
-    .popup {
-        .uFormHeading {
-            font-size: 18px;
-            margin-bottom: 20px;
-            padding-top: 30px;
-        }
-        
-        &.product_more .uFormHeading {
-            font-size: 18px;
-        }
-        .detailed_info {
-            .description {
-		    span {
-			padding: 7px 0 7px 35px;
-			margin-bottom: 5px;
-			background-size: 24px auto;
-		    }
-		}
-        }
-        p {
-            font-size: 15px;
-            line-height: 130%;
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-        .uFormLine {
-            width: 90%;
-        }
-    }
-}
-
-
-
-
-
-
-
-/* end popups styles */
-
-
-.fancybox-slide .fancybox_video {
-    width: 80%;
-    max-width: 1200px;
-    padding: 20px;
     
-    video {
-        max-width: 100%;
-        max-height: 100%
-    }
 }
+
+
+
+

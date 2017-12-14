@@ -60,7 +60,15 @@
 	    transform: skew(25deg);
 	}
     }
-    
+    /*.slick-slide  {
+	z-index: 997 !important;
+    }
+    .slick-active + .slick-slide  {
+	z-index: 998 !important;
+    }
+    .slick-active  {
+	z-index: 999 !important;
+    }*/
     .slick-active .image_block {
 	box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
 	> div  {
@@ -309,7 +317,7 @@
 	    height: auto;
 	    width: 100%;
 	    box-sizing: border-box;
-	    padding: 0 60px 20px;
+	    padding: 0 55px 20px;
 	}
 	
 	&.adv_cust_rep {
@@ -349,6 +357,8 @@
 	    top: 420px;
 	}
     }
+    
+
 }
 
 @media screen and (max-width: 1340px)  {
@@ -393,6 +403,33 @@
 	    width: 32%;
 	    height: 250px;
 	    margin-bottom: 70px;
+	}
+	
+	.adv {
+	    border: 10px solid #e5f1f7;
+	    line-height: 250px;
+	    width: 30%;
+	    
+	    &:before {
+		margin-left: 160px;
+	    }
+	    &:after {
+		margin-left: 70px;
+	    }
+	    
+	    .content {
+		font-size: 20px;
+		line-height: 130%;
+		padding: 0 20px 20px;
+	    }
+	    
+	    &.adv_cust_rep {
+		width: 65%;
+		.content {
+		    font-size: 32px;
+		    line-height: 130%;
+		}
+	    }
 	}
     }
 
@@ -440,6 +477,28 @@
 	}
 	
     }
+    .services_items {
+	
+	.adv {
+	    border: 10px solid #e5f1f7;
+	    line-height: 250px;
+	    width: 30%;
+	    
+	    .content {
+		font-size: 18px;
+		line-height: 130%;
+		padding: 0 10px 20px;
+	    }
+	    
+	    &.adv_cust_rep {
+		width: 65%;
+		.content {
+		    font-size: 28px;
+		    line-height: 130%;
+		}
+	    }
+	}
+    }
 }
 
 
@@ -466,6 +525,13 @@
 	    width: 47%;
 	    height: 250px;
 	    margin-bottom: 50px;
+	}
+	
+	.adv {
+	    //line-height: 250px;
+	    &.adv_cust_rep {
+		width: 100%;
+	    }
 	}
     }
 }
@@ -533,6 +599,32 @@
 		left: 20px;
 	    }
 	}
+	.adv {
+	    line-height: 180px;
+	    
+	    &:before {
+		margin-left: 130px;
+		height: 35px;
+		width: 6px;
+	    }
+	    &:after {
+		height: 35px;
+		width: 6px;
+	    }
+	    
+	    .content {
+		font-size: 15px;
+		line-height: 130%;
+		padding: 0 10px 20px;
+	    }
+	    
+	    &.adv_cust_rep {
+		.content {
+		    font-size: 24px;
+		    line-height: 130%;
+		}
+	    }
+	}
     }
 }
 
@@ -588,6 +680,16 @@
 	    
 	    .h4 {
 		left: 20px;
+	    }
+	}
+	
+	.adv {
+	    line-height: 150px;
+	    &.adv_cust_rep {
+		.content {
+		    font-size: 17px;
+		    line-height: 130%;
+		}
 	    }
 	}
     }
