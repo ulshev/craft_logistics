@@ -284,7 +284,15 @@
     
 }
 @media screen and (max-width: 800px) {
+    #projects {
+        padding-top: 150px;
+        margin-top: -35px;
+        padding-bottom: 200px;
+        margin-bottom: -180px;
+    }
+    
     .projects {
+        
         > div {
             height: 200px;
             margin: 0 5px 20px;
@@ -325,11 +333,18 @@
 
 @media screen and (max-width: 450px) {
     #projects {
-        padding-bottom: 170px;
-        margin-bottom: -170px;
+        padding-top: 100px;
+        margin-top: -35px;
+        padding-bottom: 150px;
+        margin-bottom: -130px;
         
         .in {
             padding: 35px 20px 40px;
+        }
+        
+        .h1 {
+            float: none;
+            margin-right: 0px;
         }
     }
     .projects_slider {

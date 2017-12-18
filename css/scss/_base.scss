@@ -134,7 +134,7 @@ body {
 a {
     text-decoration: none;
     color: $color_a;
-    @include transition(color);
+    //@include transition(color);
 }
 a:hover {
     text-decoration: underline;
@@ -342,6 +342,16 @@ a.button {
 		border-top-color: #059ff9;
 	}
 	
+}
+
+@media screen and (max-width: 450px) {
+    .button_block {
+	text-align: center;
+	
+	a.button {
+		margin-left: 0;
+	}
+    }
 }
 
 .slick-slider {
@@ -910,4 +920,121 @@ a.button {
 
 .fancybox-enabled {
     overflow: auto;
+}
+
+.slide_name {
+	position: absolute;
+	top: 85px;
+	right: 50px;
+	text-align: center;
+	z-index: 5;
+	width: 80px;
+	
+	.slide_num {
+		font-size: 64px;
+		font-weight: 200;
+		color: #008dbf;
+		display: inline-block;
+		position: relative;
+		margin-bottom: 130px;
+		
+		&:after {
+			position: absolute;
+			height: 50px;
+			width: 1px;
+			content: '';
+			top: 60px;
+			left: 50%;
+			background-color: #008dbf;
+		}
+	}
+	
+	.name {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		text-transform: uppercase;
+		white-space: nowrap;
+		//text-align: right;
+		//width: 500px;
+	}
+}
+#services_items .slide_name {
+	top: 525px;
+	right: auto;
+	left: 50px;
+	
+	.slide_num {
+		margin-bottom: 330px;
+	}
+}
+
+#custom_points .slide_name {
+	top: 275px;
+	
+	.slide_num {
+		margin-bottom: 250px;
+	}
+}
+
+#about .slide_name {
+	top: 300px;
+	right: auto;
+	left: 50px;
+	
+	.slide_num {
+		margin-bottom: 140px;
+	}
+}
+
+#advantages .slide_name {
+	top: 70px;
+	
+	.slide_num {
+		margin-bottom: 150px;
+	}
+}
+
+#projects .slide_name {
+	top: 255px;
+	right: auto;
+	left: 50px;
+	
+	.slide_num {
+		margin-bottom: 220px;
+	}
+}
+
+#questions .slide_name {
+	top: 80px;
+	
+	.slide_num {
+		margin-bottom: 190px;
+	}
+}
+
+#contacts .slide_name {
+	top: 70px;
+	right: auto;
+	left: 50px;
+	
+	.slide_num {
+		margin-bottom: 170px;
+	}
+}
+@media screen and (max-width: 1600px) {
+	.slide_name {
+		right: 5px;
+	}
+	
+	#services_items .slide_name, #about .slide_name, #projects .slide_name, #contacts .slide_name {
+		left: 5px;
+	}
+	
+}
+@media screen and (max-width: 1500px) {
+	.slide_name {
+		display: none;
+	}
 }

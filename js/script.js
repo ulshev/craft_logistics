@@ -31,7 +31,7 @@ $(document).ready(function() {
 		};
 	});
 	// открытие подменю
-	if ($(window).width() < 1550) {
+	if ($(window).width() < 1580) {
 	$('.main_menu .submenu a').on('click', function(e){
 		if( !$(this).parent().hasClass('show') ) {
 			$(this).parent().addClass('show');
@@ -75,7 +75,7 @@ $(document).ready(function() {
 	
 	$(window).resize(function(){
 	        var width = $(window).width();
-		if (width < 1550) {
+		if (width < 1580) {
 			$('.main_menu').css("display", "none");
 		}else{
 			$('.main_menu').attr('style', '');
@@ -141,6 +141,13 @@ $(document).ready(function() {
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		//appendDots: '.tab_dots'
 	});
+	
+	$('.services_slider').on('beforeChange', function(slick, slide){
+		$('.services_slider .slide').eq(slide.currentSlide).addClass('ex-active');
+		setTimeout(function(){
+			$('.services_slider .ex-active').removeClass('ex-active');
+		}, 1000);
+	}) 
 	
 	var timer = false;
 	$('.tab_dots li').click(function(){

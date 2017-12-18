@@ -59,17 +59,18 @@
 	padding: 0;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 300;
+	//font-weight: 300;
+	///text-shadow: 0 0 1px rgba(0,0,0,0.2);
 	
     }
        
 }  
 	.menu_button_mob {
 	    display: none;
-	    -webkit-transform: skew(-25deg);
-	    -moz-transform: skew(-25deg);
-	    -o-transform: skew(-25deg);
-	    transform: skew(-25deg);
+	    //-webkit-transform: skew(-25deg);
+	    //-moz-transform: skew(-25deg);
+	    //-o-transform: skew(-25deg);
+	    //transform: skew(-25deg);
 	}
         ul.main_menu {
 	    text-align: justify;
@@ -99,10 +100,12 @@
 		z-index: 2;
 		text-decoration: none;
 		color: $color_text;
+		//text-shadow: 0 0 1px rgba(0,0,0,0.2);
 		@include transition(color);
 		
 		&:hover, &:focus {
 		    color: $color_a;
+		    //text-shadow: 0 0 1px rgba(0,141,191,0.2);
 		}
 		
 		&:before {
@@ -220,11 +223,11 @@
 	
     ul.main_menu {
 	>li {
-	    margin-right: 5px;
+	    margin-right: 0px;
 	}
     }
 }
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1580px) {
     //#header {
 	//.in {
 	//    padding-top: 20px;
@@ -300,7 +303,7 @@
 		    left: 0;
 		    width: 100%;
 		    height: 100%;
-		    z-index: 4;
+		    z-index: 1;
 		    display: none;
 		}
 		&.active:before {
@@ -321,7 +324,7 @@
 		overflow-x: hidden;
 		
 		>li {
-		    margin-right: 0;
+		    //margin-right: 0;
 		    display: block;
 		    //text-align: right;
 		    font-size: 18px;
@@ -385,6 +388,7 @@
 	    margin-top: 10px;
 	    padding-top: 0;
 	    margin-left: 0;
+	    background-position: left 5px;
 	}
 	a.button {
 	    margin-right: 60px;
@@ -436,9 +440,10 @@
 	    font-size: 13px;
 	    line-height: 145%;
 	    margin-right: 35px;
-	    margin-top: 5px;
+	    margin-top: 4px;
 	    padding-left: 17px;
 	    background-size: 12px;
+	    background-position: left 4px;
 	}
 	
 	nav {
@@ -453,7 +458,7 @@
 		border-bottom: 3px solid $color_a;
 		border-top: 3px solid $color_a;
 		width: 30px;
-		top: -25px;
+		top: -30px;
 		
 		&:after {
 		    height: 3px;

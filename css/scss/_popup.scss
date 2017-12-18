@@ -21,7 +21,7 @@
 	height: 410px;
 	box-sizing: border-box;
 	padding: 50px 50px;
-	background: url(images/m_window_bg.jpg) no-repeat center bottom/ cover;
+	background: #d7dde9 url(images/m_window_bg.jpg) no-repeat center bottom/ cover;
 	
 	.close {
 	    position: absolute;
@@ -94,15 +94,45 @@
 }
 
 @media screen and (max-width: 1000px) {
-    
+    .m_window {
+	.window_block {
+	    width: 500px;
+	    height: 380px;
+	    padding: 40px 40px;
+	    .close {
+		top:40px;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
-    
+    .m_window {
+	.window_block {
+	    width: 450px;
+	    height: 350px;
+	    padding: 30px 30px;
+	    
+	    .close {
+		top:30px;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 450px) {
-    
+    .m_window {
+	.window_block {
+	    width: 80%;
+	    max-width: 450px;
+	    height: 310px;
+	    padding: 20px 20px;
+	    
+	    .close {
+		top:20px;
+	    }
+	}
+    }
 }
 
 

@@ -20,7 +20,7 @@
     }
     
     .in {
-        padding: 40px 20px;
+        padding: 40px 20px 0;
     }
     
     .h1 {
@@ -149,6 +149,12 @@
 	    margin-bottom: 50px;
 	}
         
+    }
+    
+    .questions_page #questions {
+	&:after {
+	    display: none
+	}
     }
 }
 

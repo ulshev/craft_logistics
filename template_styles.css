@@ -92,10 +92,6 @@ body {
 a {
   text-decoration: none;
   color: #008dbf;
-  -webkit-transition: color 0.3s ease-out 0s;
-  -moz-transition: color 0.3s ease-out 0s;
-  -o-transition: color 0.3s ease-out 0s;
-  transition: color 0.3s ease-out 0s;
 }
 
 a:hover {
@@ -316,6 +312,14 @@ a.button:active:before, a.button:active:after {
   border-top-color: #059ff9;
 }
 
+@media screen and (max-width: 450px) {
+  .button_block {
+    text-align: center;
+  }
+  .button_block a.button {
+    margin-left: 0;
+  }
+}
 .slick-slider {
   position: relative;
   margin: 0 auto;
@@ -827,6 +831,111 @@ a.button:active:before, a.button:active:after {
   overflow: auto;
 }
 
+.slide_name {
+  position: absolute;
+  top: 85px;
+  right: 50px;
+  text-align: center;
+  z-index: 5;
+  width: 80px;
+}
+.slide_name .slide_num {
+  font-size: 64px;
+  font-weight: 200;
+  color: #008dbf;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 130px;
+}
+.slide_name .slide_num:after {
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  content: '';
+  top: 60px;
+  left: 50%;
+  background-color: #008dbf;
+}
+.slide_name .name {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#services_items .slide_name {
+  top: 525px;
+  right: auto;
+  left: 50px;
+}
+#services_items .slide_name .slide_num {
+  margin-bottom: 330px;
+}
+
+#custom_points .slide_name {
+  top: 275px;
+}
+#custom_points .slide_name .slide_num {
+  margin-bottom: 250px;
+}
+
+#about .slide_name {
+  top: 300px;
+  right: auto;
+  left: 50px;
+}
+#about .slide_name .slide_num {
+  margin-bottom: 140px;
+}
+
+#advantages .slide_name {
+  top: 70px;
+}
+#advantages .slide_name .slide_num {
+  margin-bottom: 150px;
+}
+
+#projects .slide_name {
+  top: 255px;
+  right: auto;
+  left: 50px;
+}
+#projects .slide_name .slide_num {
+  margin-bottom: 220px;
+}
+
+#questions .slide_name {
+  top: 80px;
+}
+#questions .slide_name .slide_num {
+  margin-bottom: 190px;
+}
+
+#contacts .slide_name {
+  top: 70px;
+  right: auto;
+  left: 50px;
+}
+#contacts .slide_name .slide_num {
+  margin-bottom: 170px;
+}
+
+@media screen and (max-width: 1600px) {
+  .slide_name {
+    right: 5px;
+  }
+
+  #services_items .slide_name, #about .slide_name, #projects .slide_name, #contacts .slide_name {
+    left: 5px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .slide_name {
+    display: none;
+  }
+}
 /* start header styles */
 #header {
   width: 100%;
@@ -880,15 +989,10 @@ a.button:active:before, a.button:active:after {
   padding: 0;
   text-align: center;
   font-size: 18px;
-  font-weight: 300;
 }
 
 .menu_button_mob {
   display: none;
-  -webkit-transform: skew(-25deg);
-  -moz-transform: skew(-25deg);
-  -o-transform: skew(-25deg);
-  transform: skew(-25deg);
 }
 
 ul.main_menu {
@@ -1029,10 +1133,10 @@ ul.main_menu ul .active a {
   }
 
   ul.main_menu > li {
-    margin-right: 5px;
+    margin-right: 0px;
   }
 }
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1580px) {
   #header .in {
     padding-top: 20px;
   }
@@ -1079,7 +1183,7 @@ ul.main_menu ul .active a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 1;
     display: none;
   }
   .menu_button_mob.active:before {
@@ -1099,7 +1203,6 @@ ul.main_menu ul .active a {
     overflow-x: hidden;
   }
   ul.main_menu > li {
-    margin-right: 0;
     display: block;
     font-size: 18px;
     height: auto;
@@ -1147,6 +1250,7 @@ ul.main_menu ul .active a {
     margin-top: 10px;
     padding-top: 0;
     margin-left: 0;
+    background-position: left 5px;
   }
   #header a.button {
     margin-right: 60px;
@@ -1189,9 +1293,10 @@ ul.main_menu ul .active a {
     font-size: 13px;
     line-height: 145%;
     margin-right: 35px;
-    margin-top: 5px;
+    margin-top: 4px;
     padding-left: 17px;
     background-size: 12px;
+    background-position: left 4px;
   }
   #header nav {
     top: 50px;
@@ -1204,7 +1309,7 @@ ul.main_menu ul .active a {
     border-bottom: 3px solid #008dbf;
     border-top: 3px solid #008dbf;
     width: 30px;
-    top: -25px;
+    top: -30px;
   }
   .menu_button_mob:after {
     height: 3px;
@@ -1794,15 +1899,6 @@ footer #dev img {
 #services {
   z-index: 2;
   overflow: hidden;
-    /*.slick-slide  {
-	z-index: 997 !important;
-    }
-    .slick-active + .slick-slide  {
-	z-index: 998 !important;
-    }
-    .slick-active  {
-	z-index: 999 !important;
-    }*/
 }
 #services .slide {
   position: relative;
@@ -1858,6 +1954,15 @@ footer #dev img {
   -o-transform: skew(25deg);
   transform: skew(25deg);
 }
+#services .slick-slide {
+  z-index: 997 !important;
+}
+#services .slick-slide.ex-active {
+  z-index: 998 !important;
+}
+#services .slick-slide.slick-active {
+  z-index: 999 !important;
+}
 #services .slick-active .image_block {
   box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);
 }
@@ -1865,7 +1970,6 @@ footer #dev img {
   -webkit-animation: slide 1s 0s both;
   -moz-animation: slide 1s 0s both;
   animation: slide 1s 0s both;
-  animation-delay: 0.7s;
 }
 #services .info {
   margin-right: 50%;
@@ -2401,6 +2505,9 @@ footer #dev img {
   }
 }
 @media screen and (max-width: 450px) {
+  #services .in {
+    padding-bottom: 0;
+  }
   #services .image_block {
     height: 200px;
     width: 60%;
@@ -2428,6 +2535,10 @@ footer #dev img {
     margin-left: 10px;
   }
 
+  #services_items {
+    padding-bottom: 200px;
+    margin-bottom: -270px;
+  }
   #services_items .h2 {
     width: 100%;
     margin-right: 6%;
@@ -2593,6 +2704,17 @@ footer #dev img {
   padding-bottom: 50px;
 }
 
+.about .content_wrap {
+  background: url(images/about_page_bg.jpg) no-repeat center bottom/100% auto;
+  padding-bottom: 850px;
+  margin-bottom: -250px;
+}
+
+@media screen and (max-width: 1600px) {
+  .about .content_wrap {
+    background-size: 117% auto;
+  }
+}
 @media screen and (max-width: 1340px) {
   #about {
     padding-top: 160px;
@@ -2602,6 +2724,18 @@ footer #dev img {
   }
   #about .about_img {
     margin: 0px -20px 85px -70px;
+  }
+
+  .about .content_wrap {
+    background-size: 135% auto;
+    padding-bottom: 800px;
+    margin-bottom: -200px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .about .content_wrap {
+    padding-bottom: 700px;
+    margin-bottom: -150px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -2615,6 +2749,11 @@ footer #dev img {
     margin: 50px -20px 85px -50px;
     width: 55%;
   }
+
+  .about .content_wrap {
+    padding-bottom: 600px;
+    margin-bottom: -140px;
+  }
 }
 @media screen and (max-width: 800px) {
   #about {
@@ -2626,6 +2765,11 @@ footer #dev img {
   #about .about_img {
     margin: 30px -20px 50px -20px;
     width: 55%;
+  }
+
+  .about .content_wrap {
+    padding-bottom: 460px;
+    margin-bottom: -100px;
   }
 }
 @media screen and (max-width: 590px) {
@@ -2639,10 +2783,20 @@ footer #dev img {
     margin: 30px -20px 30px -20px;
     width: 55%;
   }
+
+  .about .content_wrap {
+    padding-bottom: 330px;
+    margin-bottom: -80px;
+  }
 }
 @media screen and (max-width: 450px) {
   #about .about_img {
     display: none;
+  }
+
+  .about .content_wrap {
+    padding-bottom: 270px;
+    margin-bottom: -60px;
   }
 }
 /* end about styles */
@@ -3193,6 +3347,13 @@ footer #dev img {
   }
 }
 @media screen and (max-width: 800px) {
+  #projects {
+    padding-top: 150px;
+    margin-top: -35px;
+    padding-bottom: 200px;
+    margin-bottom: -180px;
+  }
+
   .projects > div {
     height: 200px;
     margin: 0 5px 20px;
@@ -3221,11 +3382,17 @@ footer #dev img {
 }
 @media screen and (max-width: 450px) {
   #projects {
-    padding-bottom: 170px;
-    margin-bottom: -170px;
+    padding-top: 100px;
+    margin-top: -35px;
+    padding-bottom: 150px;
+    margin-bottom: -130px;
   }
   #projects .in {
     padding: 35px 20px 40px;
+  }
+  #projects .h1 {
+    float: none;
+    margin-right: 0px;
   }
 
   .projects_slider {
@@ -3281,7 +3448,7 @@ footer #dev img {
   max-width: 795px;
 }
 #questions .in {
-  padding: 40px 20px;
+  padding: 40px 20px 0;
 }
 #questions .h1 {
   text-align: left;
@@ -3381,6 +3548,10 @@ footer #dev img {
   #questions .h1 {
     margin-top: 50px;
     margin-bottom: 50px;
+  }
+
+  .questions_page #questions:after {
+    display: none;
   }
 }
 @media screen and (max-width: 610px) {
@@ -3836,12 +4007,6 @@ footer #dev img {
   color: #000;
 }
 
-.about .content_wrap {
-  background: url(images/about_page_bg.jpg) no-repeat center bottom/auto;
-  padding-bottom: 850px;
-  margin-bottom: -250px;
-}
-
 .news_block {
   position: relative;
 }
@@ -3938,12 +4103,16 @@ footer #dev img {
   padding-bottom: 50px;
 }
 .block404 .img404 {
-  font-size: 200px;
+  font-size: 100px;
   line-height: 110%;
   display: inline-block;
   font-weight: 800;
   color: #fcd5da;
   margin-bottom: 25px;
+  max-width: 80%;
+}
+.block404 .img404 img {
+  width: 100%;
 }
 .block404 p {
   font-size: 35px;
@@ -3992,8 +4161,16 @@ footer #dev img {
     max-width: 50%;
   }
 
+  .content_wrap {
+    font-size: 15px;
+    line-height: 160%;
+  }
   .content_wrap .points {
     margin: -115px -115px 20px -380px;
+  }
+
+  .block404 .in {
+    padding-top: 80px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -4056,6 +4233,10 @@ footer #dev img {
     font-size: 35px;
     line-height: 100%;
   }
+
+  .block404 p {
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 450px) {
   .contacts_page .cont_block {
@@ -4075,6 +4256,15 @@ footer #dev img {
     max-width: 100%;
     float: none;
     text-align: center;
+  }
+
+  .block404 p {
+    font-size: 25px;
+  }
+
+  .content_wrap {
+    font-size: 14px;
+    line-height: 160%;
   }
 }
 /* end content styles */
@@ -4365,6 +4555,9 @@ footer #dev img {
 @media screen and (max-width: 400px) {
   .form_block input[type="checkbox"] + label + a {
     margin: 0 30px 25px;
+  }
+  .form_block input, .form_block textarea, .form_block select {
+    margin: 0 0 15px;
   }
 }
 /* end forms styles */
@@ -4944,7 +5137,7 @@ footer #dev img {
   height: 410px;
   box-sizing: border-box;
   padding: 50px 50px;
-  background: url(images/m_window_bg.jpg) no-repeat center bottom/cover;
+  background: #d7dde9 url(images/m_window_bg.jpg) no-repeat center bottom/cover;
 }
 .m_window .window_block .close {
   position: absolute;
@@ -5004,6 +5197,38 @@ footer #dev img {
   font-size: 18px;
   line-height: 160%;
   max-width: 340px;
+}
+
+@media screen and (max-width: 1000px) {
+  .m_window .window_block {
+    width: 500px;
+    height: 380px;
+    padding: 40px 40px;
+  }
+  .m_window .window_block .close {
+    top: 40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .m_window .window_block {
+    width: 450px;
+    height: 350px;
+    padding: 30px 30px;
+  }
+  .m_window .window_block .close {
+    top: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .m_window .window_block {
+    width: 80%;
+    max-width: 450px;
+    height: 310px;
+    padding: 20px 20px;
+  }
+  .m_window .window_block .close {
+    top: 20px;
+  }
 }
 
 /*# sourceMappingURL=template_styles.css.map */
