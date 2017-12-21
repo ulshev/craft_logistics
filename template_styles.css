@@ -1940,6 +1940,7 @@ footer #dev img {
   position: relative;
   padding-top: 45px;
   opacity: 1 !important;
+  min-height: 500px;
 }
 #services .slide:after {
   content: "";
@@ -2320,6 +2321,9 @@ footer #dev img {
 }
 
 @media screen and (max-width: 1600px) {
+  #services .slide {
+    min-height: 450px;
+  }
   #services .image_block {
     height: 449px;
     width: 442px;
@@ -2345,6 +2349,9 @@ footer #dev img {
   }
 }
 @media screen and (max-width: 1340px) {
+  #services .slide {
+    min-height: 350px;
+  }
   #services .image_block {
     height: 348px;
     width: 342px;
@@ -2407,6 +2414,9 @@ footer #dev img {
   }
 }
 @media screen and (max-width: 999px) {
+  #services .slide {
+    min-height: 250px;
+  }
   #services .image_block {
     height: 246px;
     width: 242px;
