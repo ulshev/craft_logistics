@@ -20,6 +20,15 @@ $(document).ready(function() {
 	$('#to_top').click(function() {
 	    $('body,html').animate({scrollTop:0},800);
 	});
+	
+	// шапка при прокрутке
+	$(window).scroll(function() {
+	    if($(this).scrollTop() != 0) {
+		$('#header').addClass('scroll');
+	    } else {
+		$('#header').removeClass('scroll');
+	    }
+	});
 
 	
 	// класс меню с подменю
@@ -31,7 +40,7 @@ $(document).ready(function() {
 		};
 	});
 	// открытие подменю
-	if ($(window).width() < 1580) {
+	if ($(window).width() < 1600) {
 	$('.main_menu .submenu a').on('click', function(e){
 		if( !$(this).parent().hasClass('show') ) {
 			$(this).parent().addClass('show');
@@ -75,7 +84,7 @@ $(document).ready(function() {
 	
 	$(window).resize(function(){
 	        var width = $(window).width();
-		if (width < 1580) {
+		if (width < 1600) {
 			$('.main_menu').css("display", "none");
 		}else{
 			$('.main_menu').attr('style', '');
@@ -109,7 +118,7 @@ $(document).ready(function() {
 	});
 	
 	
-	$('.tab_buttons .tab_but').on('click', function(){ 
+	$('#services .tab_buttons .tab_but').on('click', function(){ 
 		var tabs = $(this).parents('.tabs_container'),
 		id = $('.tab_buttons .tab_but', tabs).index(this);
 	    
