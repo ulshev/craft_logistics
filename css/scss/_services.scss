@@ -67,12 +67,20 @@
     }
     .slick-slide  {
 	z-index: 997 !important;
+	
+	.content {
+	    //opacity: 0;
+	}
     }
     .slick-slide.ex-active  {
 	z-index: 998 !important;
     }
     .slick-slide.slick-active  {
 	z-index: 999 !important;
+	
+	.content {
+	    //opacity: 1;
+	}
     }
     .slick-active .image_block {
 	box-shadow: 0 20px 20px rgba(33, 97, 143, 0.25);

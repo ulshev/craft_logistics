@@ -109,15 +109,18 @@
 	.slick-arrow {
 		bottom: 110px;
                 top: auto;
+                background-color: #0472b2;
+                @include transition(all);
 		&:hover:before {
-				border-top-color: rgba(255, 255, 255, 1);
-				border-bottom-color: rgba(255, 255, 255, 1); 
+				border-top-color: #0472b2;
+				border-bottom-color: #0472b2; 
 			}
 	}
 	.slick-prev {
 		left: 50%;
                 margin-left: -320px;
                 background-position: 30% center;
+                background-image: url(images/arr_prev_white.png);
 		
 		&:before {
 			margin-right: 0px;
@@ -125,15 +128,19 @@
 			float: left;
 			border-top: 0; 
 			border-right: 0;
-                        border-bottom: 40px solid rgba(255, 255, 255, 0.5); 
+                        border-bottom: 40px solid #0472b2; 
 			border-left: 20px solid transparent;
 		}
+                &:hover {
+                    margin-left: -325px;
+                }
 	}
 	.slick-next {
 		
 		right: 50%;
                 margin-right: -320px;
                 background-position: 70% center;
+                background-image: url(images/arr_next_white.png);
 		
 		&:before {
 			margin-right: -20px;
@@ -141,9 +148,13 @@
 			float: right;
 			border-bottom: 0; 
 			border-left: 0;
-                        border-top: 40px solid rgba(255, 255, 255, 0.5); 
+                        border-top: 40px solid #0472b2; 
 			border-right: 20px solid transparent;
 		}
+                
+                &:hover {
+                    margin-right: -325px;
+                }
 	}
 	
 }
@@ -178,7 +189,7 @@
         float: left;
         clear: left;
     }
-    > div:nth-child(8n+2), > div:nth-child(8n+5)  {
+    > div:nth-child(8n+2), > div:nth-child(8n+6)  {
         float: none;
         width: 530/1340*100%;
         height: 460px;
@@ -187,11 +198,11 @@
         //margin-bottom: -100px;
     }
     
-    > div:nth-child(8n+3), > div:nth-child(8n+6), > div:nth-child(8n+8) {
+    > div:nth-child(8n+3), > div:nth-child(8n+5), > div:nth-child(8n+8) {
         float: right;
         clear: right;
     }
-    > div:nth-child(8n+4), > div:nth-child(8n+6){
+    > div:nth-child(8n+4), > div:nth-child(8n+5){
         margin-top: -160px;
         
     }
@@ -261,12 +272,12 @@
         }
         
 
-        > div:nth-child(8n+2), > div:nth-child(8n+5)  {
+        > div:nth-child(8n+2), > div:nth-child(8n+6)  {
             width: 530/1340*100%;
             height: 310px;
         }
 
-        > div:nth-child(8n+4), > div:nth-child(8n+6){
+        > div:nth-child(8n+4), > div:nth-child(8n+5){
             margin-top: -110px;
             
         }
@@ -306,18 +317,18 @@
             clear: none;
         }
         
-        > div:nth-child(8n+3), > div:nth-child(8n+6), > div:nth-child(8n+8) {
+        > div:nth-child(8n+3), > div:nth-child(8n+5), > div:nth-child(8n+8) {
             float: none;
             clear: none;
         }
 
-        > div:nth-child(8n+2), > div:nth-child(8n+5)  {
+        > div:nth-child(8n+2), > div:nth-child(8n+6)  {
             width: 47%;
             height: 200px;
             
         }
 
-        > div:nth-child(8n+4), > div:nth-child(8n+6){
+        > div:nth-child(8n+4), > div:nth-child(8n+5){
             margin-top: 0px;
             
         }
@@ -383,7 +394,7 @@
             width: 100%;
         }
 
-        > div:nth-child(8n+2), > div:nth-child(8n+5)  {
+        > div:nth-child(8n+2), > div:nth-child(8n+6)  {
             width: 100%;
             height: 180px;
             

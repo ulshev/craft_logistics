@@ -21,6 +21,13 @@ $(document).ready(function() {
 	    $('body,html').animate({scrollTop:0},800);
 	});
 	
+	$(".tab_buttons_in").on("click","a", function (event) {
+	    event.preventDefault();
+	    var id  = $(this).attr('href'),
+		top = $(id).offset().top - 100;
+	    $('body,html').animate({scrollTop: top}, 500);
+	});
+	
 	// шапка при прокрутке
 	$(window).scroll(function() {
 	    if($(this).scrollTop() != 0) {
@@ -151,10 +158,10 @@ $(document).ready(function() {
 		//appendDots: '.tab_dots'
 	});
 	
-	$('.services_slider').on('beforeChange', function(slick, slide){
-		$('.services_slider .slide').eq(slide.currentSlide).addClass('ex-active');
+	$('.active .slick-initialized').on('beforeChange', function(slick, slide){
+		$('.active .slick-initialized .slide').eq(slide.currentSlide).addClass('ex-active');
 		setTimeout(function(){
-			$('.services_slider .ex-active').removeClass('ex-active');
+			$('.active .slick-initialized .ex-active').removeClass('ex-active');
 		}, 1000);
 	}) 
 	

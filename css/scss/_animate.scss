@@ -292,13 +292,22 @@
     transition-delay: 0.2s;
   }
   
-  
-  #services.hidden .slick-slide .mask .content {
+  #services.hidden .tab_buttons .mask .content, #services.hidden .tab_dots .mask .content {
+    transform: translateY(0%);
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  #services.animated .tab_buttons .mask .content, #services.animated .tab_dots .mask .content {
+    transform: translateY(0%);
+    //opacity: 1;
+  }
+  #services .slick-slide .mask .content {
     transform: translateY(100%);
     transition-delay: 0.4s;
   }
-  #services.animated .slick-active .mask .content {
+  #services .slick-active .mask .content {
     transform: translateY(0%);
+    opacity: 1;
   }
   #services.hidden .image_block:before {
     width:100%;
